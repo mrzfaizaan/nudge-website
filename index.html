@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nudge — ambient HUD for high-stakes focus</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-[#09090b] text-zinc-200 antialiased">
+
+  <!-- Fixed Glassy Nav -->
+  <header class="w-full fixed top-0 z-50 bg-zinc-900/50 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+      <a href="#" class="border border-white/10 hover:bg-white/5 rounded-md px-4 py-2 text-sm transition-all">
+        Get Nudge
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section (Two-Column Split) -->
+  <section class="max-w-7xl mx-auto px-6 pt-40 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="text-left">
+      <h1 class="text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+        The Ambient HUD for High-Stakes Focus.
+      </h1>
+      <p class="text-lg text-zinc-400 mt-6 leading-relaxed">
+        Reads local Markdown. Obsidian ready. Native Rust engine. Sub-4MB footprint.
+      </p>
+      <a href="#" class="mt-10 px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold rounded-lg shadow-[0_0_30px_rgba(16,185,129,0.2)] transition-all inline-block">
+        Download for Free (or tip $9)
+      </a>
+    </div>
+    <div class="w-full max-w-lg mx-auto drop-shadow-2xl">
+      <img src="website_handoff/assets/nudge_ad_slate.png" alt="Nudge ad slate" class="w-full">
+    </div>
+  </section>
+
+  <!-- Video Showcase (Full-Width Theater) -->
+  <section class="w-full px-6">
+    <div class="rounded-2xl border border-white/10 bg-zinc-900/40 backdrop-blur-2xl p-2 shadow-2xl w-full max-w-7xl mx-auto mb-32 overflow-hidden">
+      <video autoplay loop muted playsinline class="w-full h-auto rounded-xl border border-black/60 shadow-inner">
+        <source src="website_handoff/assets/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- Engine Section (3-Column Grid) -->
+  <section class="w-full max-w-7xl mx-auto px-6 py-24">
+    <h2 class="text-3xl font-bold text-white mb-12 tracking-tight text-center">The Engine.</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm">
+        <span class="font-mono text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-md inline-block mb-4 text-sm">[ ]</span>
+        <h3 class="text-xl font-bold text-white mb-3">Action</h3>
+        <p class="text-zinc-400">Checkbox nodes for execution. Toggle [ ] to [x] — file mutation on disk. Your commitments, tracked.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm">
+        <span class="font-mono text-blue-400 bg-blue-400/10 px-3 py-1 rounded-md inline-block mb-4 text-sm">*</span>
+        <h3 class="text-xl font-bold text-white mb-3">Bullet</h3>
+        <p class="text-zinc-400">Neutral list items for reference. Rendered as • — visible but never toggle-able. Safe for notes and context.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm">
+        <span class="font-mono text-amber-400 bg-amber-400/10 px-3 py-1 rounded-md inline-block mb-4 text-sm">-</span>
+        <h3 class="text-xl font-bold text-white mb-3">Plain</h3>
+        <p class="text-zinc-400">Passive context anchors. No checkbox, no decoration. Pure text for blockers, notes, and ambient information that anchors your workflow.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HUD Controls Section (2x2 Grid) -->
+  <section class="w-full max-w-4xl mx-auto px-6 pb-24">
+    <h2 class="text-2xl font-bold text-white mb-10 tracking-tight text-center">Complete HUD Control.</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+      <div>
+        <h3 class="text-zinc-200 font-semibold mb-1">Spatial Docking</h3>
+        <p class="text-sm text-zinc-500">Adjustable width constraints. Snap natively to the Left, Center, or Right of your active monitor.</p>
+      </div>
+      <div>
+        <h3 class="text-zinc-200 font-semibold mb-1">Visibility Toggles</h3>
+        <p class="text-sm text-zinc-500">Pin to top for an always-on-top overlay, or enable auto-hide to fade out when losing focus.</p>
+      </div>
+      <div>
+        <h3 class="text-zinc-200 font-semibold mb-1">Viewport Modes</h3>
+        <p class="text-sm text-zinc-500">Collapse into a minimalist title bar or expand for full document view.</p>
+      </div>
+      <div>
+        <h3 class="text-zinc-200 font-semibold mb-1">Native Theming</h3>
+        <p class="text-sm text-zinc-500">Hardware-accelerated rendering in both Light and Dark modes to match your OS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Banner -->
+  <div class="w-full border-t border-b border-zinc-800/50 bg-zinc-900/20 py-12">
+    <p class="text-center text-sm font-bold tracking-[0.2em] text-zinc-500 uppercase">MEETINGS &nbsp;•&nbsp; CODING &nbsp;•&nbsp; RESEARCH &nbsp;•&nbsp; PODCASTS</p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w-full max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center text-sm text-zinc-500">
+    <p>&copy; 2026 nudge.</p>
+    <div class="flex gap-6">
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+
+</body>
+</html>
