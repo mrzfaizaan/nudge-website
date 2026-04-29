@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@
       <a href="/" class="text-2xl font-bold text-white lowercase tracking-tight">
         nudge<span class="text-emerald-500">.</span>
       </a>
-      <a href="#" class="border border-white/10 hover:bg-white/5 rounded-md px-4 py-2 text-sm transition-all">
+      <a href="#download" class="border border-white/10 hover:bg-white/5 rounded-md px-4 py-2 text-sm transition-all">
         Get Nudge
       </a>
     </div>
@@ -35,9 +35,15 @@
       <p class="text-lg text-zinc-400 mt-6 leading-relaxed">
         Reads local Markdown. Obsidian ready. Native Rust engine. Sub-4MB footprint.
       </p>
-      <a href="#" class="mt-10 px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold rounded-lg shadow-[0_0_30px_rgba(16,185,129,0.2)] transition-all inline-block">
-        Download for Free (or tip $9)
-      </a>
+      <div id="download" class="mt-10 flex flex-col sm:flex-row gap-4 justify-start">
+        <a href="./downloads/nudge-windows-v0.1.2.exe" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all flex items-center justify-center gap-2">
+          Download for Windows
+        </a>
+        <a href="./downloads/nudge-mac-v0.1.2.dmg" class="px-6 py-3 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 font-bold rounded-lg border border-zinc-700 transition-all flex items-center justify-center gap-2">
+          Download for macOS
+        </a>
+      </div>
+      <p class="text-xs text-zinc-500 mt-3 text-left">Free during v0.1.x beta. No email required.</p>
     </div>
     <div class="w-full max-w-lg mx-auto drop-shadow-2xl">
       <img src="website_handoff/assets/nudge_ad_slate.png" alt="Nudge ad slate" class="w-full">
