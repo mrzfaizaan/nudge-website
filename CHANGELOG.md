@@ -4,7 +4,7 @@ All notable changes to Nudge will be documented in this file.
 
 ---
 
-## [Unreleased] — v0.1.3
+## [0.1.3] — 2026-05-07
 
 ### Added
 - **"Create New" button** (📄 in icon row) — opens native save dialog, writes a markdown template with formatting instructions to the chosen path
