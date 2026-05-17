@@ -4,9 +4,33 @@ All notable changes to Nudge will be documented in this file.
 
 ---
 
-## [0.1.3] — 2026-05-07
+## [0.1.4] — 2026-05-17
 
 ### Added
+
+- **Auto-update support** — `tauri-plugin-updater` integrated with `Builder::new().build()`; pubkey in `tauri.conf.json` under `plugins.updater`; endpoint at `https://nudgehud.work/updater.json`; minisign signing via `tauri signer sign`
+- **License activation system** — Lemon Squeezy License API integration; `verify_license` Tauri command calls `POST /v1/licenses/activate` with license key and machine hostname as `instance_name`; 10-second connection timeout via `ureq`
+- **License paywall UI** — full-screen blocking modal on first launch (400×380px centered on monitor); emerald accent (`#10B981`) for button and link; transparent overlay wrapper, white card with rounded corners and drop shadow; checks `localStorage.nudge_is_licensed` before booting main app
+- **`hostname` crate** — machine identifier bound to license instances for activation tracking
+
+### Changed
+
+- **Accent color** — license flow button and link changed from purple (`#6c5ce7`) to emerald (`#10B981`)
+- **Tauri plugin registration** — updater plugin added to `tauri::Builder` chain in `src-tauri/src/lib.rs`
+- **Cargo dependencies** — added `ureq` (with `json` feature), `hostname`, `tauri-plugin-updater`; removed `reqwest` to keep dep tree light
+- **npm dependencies** — added `@tauri-apps/plugin-updater`
+
+### Fixed
+
+- **License API payload format** — switched from `send_json` (JSON) to `send_form` (URL-encoded) to match Lemon Squeezy License API requirements
+- **"Box-in-box" visual artifact** — license wall parent div stripped to `background: transparent`, leaving only `.license-card` as the visible container
+
+---
+
+## [Unreleased] — v0.1.3
+
+### Added
+
 - **"Create New" button** (📄 in icon row) — opens native save dialog, writes a markdown template with formatting instructions to the chosen path
 - **"Add Task" input field** at the bottom of expanded view — type and press Enter or click `+` to append a task under the current heading section
 - **`classifyInput()` auto-classification** — detects `- [ ]` (task), `* ` (bullet), `- ` (plain), `#`/`##` (heading), numbered lists; defaults to `- [ ]` action task
@@ -17,6 +41,7 @@ All notable changes to Nudge will be documented in this file.
 - **`find_insert_line()` Rust helper** — scans parsed entries to locate the correct insert point per heading context
 
 ### Fixed
+
 - **Trackpad scroll sensitivity** — debounce (300ms quiet window) plus synchronous navigation lock eliminates multi-task skipping from momentum scroll events
 - **Navigation stuck at heading boundaries** — lock now released by `onNavigate()` completion instead of a fixed 450ms timeout, eliminating the race window between animation end and lock expiry
 - **Bullet point UI** — bullets now render as clean dots (`•`) without checkbox borders, both in the banner and expanded view
@@ -25,6 +50,7 @@ All notable changes to Nudge will be documented in this file.
 - **macOS autohide not reopening on mouse hover** — `HOVER_IDLE_H` increased from `2px` to `6px` for reliable mouse event detection
 
 ### Changed
+
 - **LLM prompt** (Info panel) — rule 1 now instructs the model to scan input and auto-generate `#` and `##` headings (previously left heading usage ambiguous)
 - **Hide button repurposed** — `●` button now toggles Pin mode (`📌`). When pinned, auto-hide is suppressed and the banner stays visible. Visual icon swap communicates state clearly.
 - **Scroll navigation lock** — renamed `isNavigating` to `navigateLocked`; lock set synchronously at wheel handler entry instead of inside async animation functions
@@ -35,9 +61,11 @@ All notable changes to Nudge will be documented in this file.
 ## [0.1.2] — 2026-04-29
 
 ### Changed
+
 - **Product branding** — name changed to "Nudge"; integrated brand identity across icons and window title
 
 ### Added
+
 - **GitHub Actions CI/CD workflow** — automated release builds for macOS (aarch64-apple-darwin) and Windows (x86_64-pc-windows-msvc) triggered by version tags
 
 ---
@@ -45,6 +73,7 @@ All notable changes to Nudge will be documented in this file.
 ## [0.1.1] — 2026-04-28
 
 ### Changed
+
 - **Rust parser upgraded** — tasks now classified into 3-tier display modes: `action` (checkbox), `bullet` (dot), `plain` (no indicator). Previously all tasks rendered as checkboxes.
 
 ---
@@ -52,6 +81,7 @@ All notable changes to Nudge will be documented in this file.
 ## [0.1.0] — 2026-04-27
 
 ### Added
+
 - **Initial release** — Nudge ambient HUD
 - **Tauri v2 shell** — Rust backend with vanilla TypeScript frontend, no framework runtime
 - **4-pass task parser** — supports 4 mixed formats: A (classic brackets `h1:`/`[ ]`), B (asterisk `*`), C (underlined `----`), D (markdown `#`/`- [ ]`)
