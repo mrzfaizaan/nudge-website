@@ -1,6 +1,6 @@
 {
   "name": "Nudge — Ambient HUD",
-  "short_name": "nudge",
+  "short_name": "Nudge",
   "description": "The ambient HUD for high-stakes focus. Your current task, always in frame.",
   "start_url": "/",
   "display": "standalone",
