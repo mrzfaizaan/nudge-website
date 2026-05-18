@@ -7,17 +7,17 @@
 ## Product Identity
 
 **Name:** Nudge
-**Tagline:** *The Ambient HUD for High-Stakes Focus*
+**Tagline:** _The Ambient HUD for High-Stakes Focus_
 **Identifier:** `com.mrzfaizaan.nudge`
 **Version:** 0.1.0
 
 ### Core Philosophy
 
-> *"Eliminating the friction of context switching."*
+> _"Eliminating the friction of context switching."_
 
 Nudge is a persistent heads-up display that lives at the top of your monitor and keeps you on track while you work in other windows. It is **not** a to-do app. It is a **teleprompter for your life.**
 
-Most productivity tools demand your full attention. Nudge demands nearly none. It occupies **2px of vertical space** when idle and expands to a readable banner when you need it. The current task is always in frame. The hierarchy is always visible. You never switch contexts to check *"what's next."*
+Most productivity tools demand your full attention. Nudge demands nearly none. It occupies **2px of vertical space** when idle and expands to a readable banner when you need it. The current task is always in frame. The hierarchy is always visible. You never switch contexts to check _"what's next."_
 
 The logo — **Progressive Stream** — is a set of horizontal bars transitioning from dense to sparse, representing raw data flowing through the parser and emerging as structured, actionable tasks. Completion tames the stream.
 
@@ -25,24 +25,24 @@ The logo — **Progressive Stream** — is a set of horizontal bars transitionin
 
 - Concise, opinionated, technical
 - No hype, no gamification, no notifications
-- Frames itself as a *cognitive anchor* not a *productivity tool*
+- Frames itself as a _cognitive anchor_ not a _productivity tool_
 - Describes itself with industrial precision (absolute Cartesian coordinates, 4-pass state machine, 3-tier node system)
 
 ---
 
 ## Technical Flex
 
-| Dimension | Specification |
-|---|---|
-| **Runtime** | Tauri v2 (Rust binary + webview, no Electron) |
-| **Frontend** | Vanilla TypeScript + Vite, zero framework runtime |
-| **Binary footprint** | ~4 MB on disk (release build) |
-| **Frontend payload** | ~46 KB gzipped (HTML + CSS + JS) |
-| **Window mode** | Frameless, transparent, always-on-top, non-resizable |
-| **Default window** | 800 × 85 px, expands to 120–500 px per view |
-| **Security** | CSP disabled (null) for local file access |
-| **Parsing engine** | 3-Tier Node Parser in Rust (regex-based state machine) |
-| **File formats** | `.txt`, `.md`, `.json` |
+| Dimension            | Specification                                          |
+| -------------------- | ------------------------------------------------------ |
+| **Runtime**          | Tauri v2 (Rust binary + webview, no Electron)          |
+| **Frontend**         | Vanilla TypeScript + Vite, zero framework runtime      |
+| **Binary footprint** | ~4 MB on disk (release build)                          |
+| **Frontend payload** | ~46 KB gzipped (HTML + CSS + JS)                       |
+| **Window mode**      | Frameless, transparent, always-on-top, non-resizable   |
+| **Default window**   | 800 × 85 px, expands to 120–500 px per view            |
+| **Security**         | CSP disabled (null) for local file access              |
+| **Parsing engine**   | 3-Tier Node Parser in Rust (regex-based state machine) |
+| **File formats**     | `.txt`, `.md`, `.json`                                 |
 
 ### Multi-Monitor Spatial Windowing
 
@@ -66,11 +66,11 @@ The parser is a Rust state machine in `src-tauri/src/lib.rs` that runs 4 classif
 
 ### The Three Node Types
 
-| Node Type | Prefix | `display_mode` | UI Rendering | Toggle-able? |
-|---|---|---|---|---|
-| **Action** | `[ ]`, `[x]`, `- [ ]`, `- [x]` | `"action"` | Checkbox □ / ☑ with strikethrough on completion | Yes |
-| **Bullet** | `* ` (asterisk-space) | `"bullet"` | Neutral bullet dot •, no completion style | No |
-| **Plain** | `- ` (dash-space BUT NOT `- [ ]`) | `"plain"` | No checkbox, text only | No |
+| Node Type  | Prefix                            | `display_mode` | UI Rendering                                    | Toggle-able? |
+| ---------- | --------------------------------- | -------------- | ----------------------------------------------- | ------------ |
+| **Action** | `[ ]`, `[x]`, `- [ ]`, `- [x]`    | `"action"`     | Checkbox □ / ☑ with strikethrough on completion | Yes          |
+| **Bullet** | `* ` (asterisk-space)             | `"bullet"`     | Neutral bullet dot •, no completion style       | No           |
+| **Plain**  | `- ` (dash-space BUT NOT `- [ ]`) | `"plain"`      | No checkbox, text only                          | No           |
 
 ### How It Works (4 Passes)
 
@@ -81,10 +81,11 @@ Pass 1 — classify_line()
     • Decorative (====)
     • Dashes (----)
     • TaskAC / TaskD ([ ] / - [ ] action nodes)
-    • Bullet (* ) 
+    • Bullet (* )
     • Plain (-  or unrecognized text)
     • HeadingD (Markdown # syntax)
     • Plain (generic text fallthrough)
+    • Numbered List (1. , 2. , 3. , etc.)
 
 Pass 2 — resolve_format_c()
   Dashes immediately preceded by a plain line → Format C heading
@@ -112,14 +113,14 @@ Only `"action"` nodes trigger file mutation. `toggle_line_in_file()` rewrites th
 
 ### Primary Users
 
-| Persona | Why Nudge |
-|---|---|
-| **Engineers / Developers** | Keeps standup talking points, code review queues, or deployment steps visible without alt-tabbing |
-| **Researchers** | Literature review beats, chapter milestones, data collection steps — visible during writing |
+| Persona                     | Why Nudge                                                                                                |
+| --------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **Engineers / Developers**  | Keeps standup talking points, code review queues, or deployment steps visible without alt-tabbing        |
+| **Researchers**             | Literature review beats, chapter milestones, data collection steps — visible during writing              |
 | **Presenters / Performers** | Slide talking points, podcast outlines, live demo scripts — the audience sees the content, not the notes |
-| **Sales & Client-facing** | Call agendas, objection handling sequences, meeting talking points — no paper shuffling |
-| **Clinical & Therapy** | Speech exercises, CBT prompts, physiotherapy step sequences — persistent until done |
-| **Personal OS** | Morning routines, medication sequences, habit stacks — visible all day without phone notifications |
+| **Sales & Client-facing**   | Call agendas, objection handling sequences, meeting talking points — no paper shuffling                  |
+| **Clinical & Therapy**      | Speech exercises, CBT prompts, physiotherapy step sequences — persistent until done                      |
+| **Personal OS**             | Morning routines, medication sequences, habit stacks — visible all day without phone notifications       |
 
 ### Workflow Example 1: Live Presentation Nudging
 
@@ -180,16 +181,16 @@ The producer runs Nudge on a separate machine or secondary display. The guest an
 
 ## File Reference (Key Source Documents)
 
-| Document | Path in Repo | Contents |
-|---|---|---|
-| README | `README.md` | Full product pitch, tech architecture, use-case grid, development workflow |
-| Architecture Map | `ARCHITECTURE.md` | C4-style module map, component breakdown, data flow table, format reference |
-| Tutorial | `tutorial.md` | End-user quick start guide, icon reference, use-case catalog, settings reference |
-| Tauri Config | `src-tauri/tauri.conf.json` | Window geometry, bundle config, security policy, build pipeline |
-| Rust Backend | `src-tauri/src/lib.rs` | 3-tier parser, file I/O, state manager, 12 Tauri commands, monitor API |
-| Frontend | `src/main.ts` | View manager, window geometry, auto-hide, tutorial system, settings persistence |
-| Styles | `src/styles.css` | Dark/light theme via CSS custom properties, glassmorphism, roll animations |
-| Python Reference | `file_handler.py` | Original Python prototype of the parser (documentation / cross-reference) |
+| Document         | Path in Repo                | Contents                                                                         |
+| ---------------- | --------------------------- | -------------------------------------------------------------------------------- |
+| README           | `README.md`                 | Full product pitch, tech architecture, use-case grid, development workflow       |
+| Architecture Map | `ARCHITECTURE.md`           | C4-style module map, component breakdown, data flow table, format reference      |
+| Tutorial         | `tutorial.md`               | End-user quick start guide, icon reference, use-case catalog, settings reference |
+| Tauri Config     | `src-tauri/tauri.conf.json` | Window geometry, bundle config, security policy, build pipeline                  |
+| Rust Backend     | `src-tauri/src/lib.rs`      | 3-tier parser, file I/O, state manager, 12 Tauri commands, monitor API           |
+| Frontend         | `src/main.ts`               | View manager, window geometry, auto-hide, tutorial system, settings persistence  |
+| Styles           | `src/styles.css`            | Dark/light theme via CSS custom properties, glassmorphism, roll animations       |
+| Python Reference | `file_handler.py`           | Original Python prototype of the parser (documentation / cross-reference)        |
 
 ---
 
@@ -197,29 +198,29 @@ The producer runs Nudge on a separate machine or secondary display. The guest an
 
 The following visual assets were copied into `website_handoff/assets/`:
 
-| File | Type | Resolution | Source |
-|---|---|---|---|
-| `logo1.svg` | Vector (SVG) | — | Root — Progressive Stream logo |
-| `icon.png` | Raster (PNG) | ~512×512 | `src-tauri/icons/` — primary app icon |
-| `32x32.png` | Raster (PNG) | 32×32 | `src-tauri/icons/` |
-| `64x64.png` | Raster (PNG) | 64×64 | `src-tauri/icons/` |
-| `128x128.png` | Raster (PNG) | 128×128 | `src-tauri/icons/` |
-| `128x128@2x.png` | Raster (PNG) | 256×256 | `src-tauri/icons/` |
-| `Square30x30Logo.png` | Raster (PNG) | 30×30 | `src-tauri/icons/` — Windows Store |
-| `Square44x44Logo.png` | Raster (PNG) | 44×44 | `src-tauri/icons/` — Windows Store |
-| `Square71x71Logo.png` | Raster (PNG) | 71×71 | `src-tauri/icons/` — Windows Store |
-| `Square89x89Logo.png` | Raster (PNG) | 89×89 | `src-tauri/icons/` — Windows Store |
-| `Square107x107Logo.png` | Raster (PNG) | 107×107 | `src-tauri/icons/` — Windows Store |
-| `Square142x142Logo.png` | Raster (PNG) | 142×142 | `src-tauri/icons/` — Windows Store |
-| `Square150x150Logo.png` | Raster (PNG) | 150×150 | `src-tauri/icons/` — Windows Store |
-| `Square284x284Logo.png` | Raster (PNG) | 284×284 | `src-tauri/icons/` — Windows Store |
-| `Square310x310Logo.png` | Raster (PNG) | 310×310 | `src-tauri/icons/` — Windows Store |
-| `StoreLogo.png` | Raster (PNG) | — | `src-tauri/icons/` — Windows Store |
-| `icon.ico` | Icon (ICO) | Multi-res | `src-tauri/icons/` — Windows |
-| `icon.icns` | Icon (ICNS) | Multi-res | `src-tauri/icons/` — macOS |
-| `vite.svg` | Vector (SVG) | — | `src/assets/` — build tool logo |
-| `tauri.svg` | Vector (SVG) | — | `src/assets/` — framework logo |
-| `typescript.svg` | Vector (SVG) | — | `src/assets/` — language logo |
+| File                    | Type         | Resolution | Source                                |
+| ----------------------- | ------------ | ---------- | ------------------------------------- |
+| `logo1.svg`             | Vector (SVG) | —          | Root — Progressive Stream logo        |
+| `icon.png`              | Raster (PNG) | ~512×512   | `src-tauri/icons/` — primary app icon |
+| `32x32.png`             | Raster (PNG) | 32×32      | `src-tauri/icons/`                    |
+| `64x64.png`             | Raster (PNG) | 64×64      | `src-tauri/icons/`                    |
+| `128x128.png`           | Raster (PNG) | 128×128    | `src-tauri/icons/`                    |
+| `128x128@2x.png`        | Raster (PNG) | 256×256    | `src-tauri/icons/`                    |
+| `Square30x30Logo.png`   | Raster (PNG) | 30×30      | `src-tauri/icons/` — Windows Store    |
+| `Square44x44Logo.png`   | Raster (PNG) | 44×44      | `src-tauri/icons/` — Windows Store    |
+| `Square71x71Logo.png`   | Raster (PNG) | 71×71      | `src-tauri/icons/` — Windows Store    |
+| `Square89x89Logo.png`   | Raster (PNG) | 89×89      | `src-tauri/icons/` — Windows Store    |
+| `Square107x107Logo.png` | Raster (PNG) | 107×107    | `src-tauri/icons/` — Windows Store    |
+| `Square142x142Logo.png` | Raster (PNG) | 142×142    | `src-tauri/icons/` — Windows Store    |
+| `Square150x150Logo.png` | Raster (PNG) | 150×150    | `src-tauri/icons/` — Windows Store    |
+| `Square284x284Logo.png` | Raster (PNG) | 284×284    | `src-tauri/icons/` — Windows Store    |
+| `Square310x310Logo.png` | Raster (PNG) | 310×310    | `src-tauri/icons/` — Windows Store    |
+| `StoreLogo.png`         | Raster (PNG) | —          | `src-tauri/icons/` — Windows Store    |
+| `icon.ico`              | Icon (ICO)   | Multi-res  | `src-tauri/icons/` — Windows          |
+| `icon.icns`             | Icon (ICNS)  | Multi-res  | `src-tauri/icons/` — macOS            |
+| `vite.svg`              | Vector (SVG) | —          | `src/assets/` — build tool logo       |
+| `tauri.svg`             | Vector (SVG) | —          | `src/assets/` — framework logo        |
+| `typescript.svg`        | Vector (SVG) | —          | `src/assets/` — language logo         |
 
 ### Notes for Website Build
 
