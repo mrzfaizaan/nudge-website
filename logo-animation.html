@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nudge Logo Animation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #09090b;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-container {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #fff;
+      display: flex;
+      align-items: baseline;
+      line-height: 1;
+    }
+
+    .typing-text {
+      display: inline-block;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 0;
+      min-width: 0;
+      vertical-align: bottom;
+      padding-bottom: 0.15em;
+      margin-bottom: -0.15em;
+      animation: reveal-udge 0.7s 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    }
+
+    @keyframes reveal-udge {
+      from { width: 0; }
+      to   { width: 2.4em; }
+    }
+
+    .emerald-dot {
+      color: #10B981;
+      text-shadow: 0 0 24px rgba(16, 185, 129, 0.35);
+      animation: dot-pulse 1.6s 1.7s ease-in-out;
+    }
+
+    @keyframes dot-pulse {
+      0%, 100% { opacity: 0.7; }
+      50%      { opacity: 1; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .typing-text {
+        width: 2.3em;
+        animation: none;
+      }
+      .emerald-dot {
+        animation: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="logo-container">
+    <span>n</span><span class="typing-text">udge</span><span class="emerald-dot">.</span>
+  </div>
+</body>
+</html>
