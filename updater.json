@@ -1,10 +1,10 @@
 {
-  "version": "0.1.4",
-  "notes": "License activation system with Lemon Squeezy. Auto-update support via Tauri updater plugin.",
-  "pub_date": "2026-05-17T00:00:00Z",
+  "version": "0.2.0",
+  "notes": "Right-click menus, drag-and-drop, auto-scroll, global shortcut, hot reload, inline links, headings, quick file switcher, 17-step tutorial, user guide, 7-day trial enclave.",
+  "pub_date": "2026-06-04T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNThVS01TakVwQ2Z6L2xvNjlnVlpBem9EV1JLc2tFMGJiV3hIcjc1dDRRTVFrN0RubENQTkFZZnpMR3RyZjFOTWR2MXlnOUdTRnNVbHR5RWxoMGUveG12T09JM3hzNXdrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzc5MDQyNzAyCWZpbGU6TnVkZ2VfMC4xLjRfeDY0LXNldHVwLmV4ZQo5a296SFB0VXdaYnVYTVNQekc3elhDY2IxWEtIbGNIWDZ3V3daNkVSbldZQUQrdldZSEFaMXNZQU5KSHpKYXZ2NHZ3SnowUmdYSnhDRHM5ZG12ZXdEZz09Cg==",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNThVS01TakVwQ1g4VkpuZGNpUVpzeG5DV3VqVjhqTFdhSXhQcXVZNnZjWnB3VlhVQkpoNzdYMkVpR3RXODFSbStQVE91b1RlMWVFa3FnVVBFdXp0U0F2OWhZUC95aHdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNTE2MjkzCWZpbGU6TnVkZ2VfMC4yLjBfeDY0LXNldHVwLmV4ZQpvaG04WGpXTWtTODBaMlZEYUo3dG1TdlVQdUc2azN1VjJ5ckJya09GcUovWCtiM3VLQjV2YnB6d0FsUG84eithYmtla2xqNVc4MjVEckJUc0xZcGtBdz09Cg==",
       "url": "https://nudgehud.work/downloads/nudge-setup.exe"
     }
   }
