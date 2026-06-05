@@ -4,6 +4,15 @@ All notable changes to Nudge will be documented in this file.
 
 ---
 
+## [0.2.1] — 2026-06-05
+
+### Fixed
+- **Trial hardening** — five critical bypass vectors closed: localStorage short-circuit removed (frontend always validates via Rust backend first); plain-text "LICENSED" sentinel replaced with HMAC-signed token binding status + fingerprint + timestamp; multi-location storage (shadow copy of trial state in `state.json` for tamper-resistant cross-check, restoring from shadow if `.sys_time` is deleted or tampered); system clock rollback detection (max observed timestamp tracked, backward time jumps trigger expiry); periodic license re-validation (licensed installs re-verify with Lemon Squeezy every 3 days, 7-day offline grace period, server-side revocation clears license)
+- **Machine fingerprinting** — trial identity now binds to `hostname + COMPUTERNAME + USERNAME` hash, preventing trial reset via hostname change or registry drift
+- **Startup performance** — removed blocking `reg.exe` process spawn; fingerprint computed instantly from environment variables with `OnceLock` caching, eliminating 5-second lag on every launch
+
+---
+
 ## [0.2.0] — 2026-06-04
 
 ### Added
@@ -45,6 +54,7 @@ All notable changes to Nudge will be documented in this file.
 - **Opacity setting** — backgrounds now use `--bg-alpha` CSS variable instead of `document.body.style.opacity`; text stays fully opaque at all levels; `applyOpacity()` sets alpha on `:root` via `setProperty`
 - **Add-task input persistence** — expanded view restructured as flex column: add-task row sits as fixed header, only the task list scrolls (no overlay feel, no sticky hacks); scrollbar moved to `#expanded-task-list`
 - **Expanded-view scroll** — clicking a task in expanded view no longer snaps to top; scroll position saved before DOM rebuild and restored after
+- **Auto-updater** — updater plugin was registered in Rust but never triggered from JavaScript; added `check()` call from `@tauri-apps/plugin-updater` in `initApp()` after window shown
 
 ### Removed
 - **"Always hide (show on hover)" checkbox** — redundant with pin toggle in icon row
