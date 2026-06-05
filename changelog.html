@@ -77,6 +77,7 @@
       <!-- Sidebar Navigator -->
       <nav class="hidden lg:block">
         <div class="sticky top-24 border border-white/10 rounded-lg bg-zinc-900/40 backdrop-blur-sm p-1">
+          <a href="#v0.2.1" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5" data-sidebar-link>v0.2.1</a>
           <a href="#v0.2.0" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5" data-sidebar-link>v0.2.0</a>
           <a href="#v0.1.4" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5" data-sidebar-link>v0.1.4</a>
           <a href="#v0.1.3" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5" data-sidebar-link>v0.1.3</a>
@@ -88,6 +89,28 @@
       <!-- Content Column -->
       <div>
         <h1 class="text-4xl font-bold text-white mb-16 tracking-tight">Changelog</h1>
+
+    <!-- v0.2.1 -->
+    <div class="mb-16">
+      <div class="flex items-baseline gap-3 mb-6">
+        <h2 id="v0.2.1" class="text-2xl font-bold text-white scroll-mt-24">v0.2.1</h2>
+        <span class="text-sm text-zinc-500 ml-2">2026-06-05</span>
+      </div>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-sm font-semibold text-amber-500 uppercase tracking-wider mb-3">Fixed</h3>
+          <ul class="space-y-2 text-zinc-400">
+            <li class="pl-4 border-l-2 border-amber-500/30"><strong class="text-zinc-200">Trial hardening</strong> — five critical bypass vectors closed: localStorage short-circuit removed (frontend always validates via Rust backend first); plain-text "LICENSED" sentinel replaced with HMAC-signed token binding status + fingerprint + timestamp; multi-location storage (shadow copy of trial state in <code class="bg-zinc-800 px-1.5 py-0.5 rounded text-sm text-zinc-300">state.json</code> for tamper-resistant cross-check, restoring from shadow if <code class="bg-zinc-800 px-1.5 py-0.5 rounded text-sm text-zinc-300">.sys_time</code> is deleted or tampered); system clock rollback detection (max observed timestamp tracked, backward time jumps trigger expiry); periodic license re-validation (licensed installs re-verify with Lemon Squeezy every 3 days, 7-day offline grace period, server-side revocation clears license)</li>
+            <li class="pl-4 border-l-2 border-amber-500/30"><strong class="text-zinc-200">Machine fingerprinting</strong> — trial identity now binds to <code class="bg-zinc-800 px-1.5 py-0.5 rounded text-sm text-zinc-300">hostname + COMPUTERNAME + USERNAME</code> hash, preventing trial reset via hostname change or registry drift</li>
+            <li class="pl-4 border-l-2 border-amber-500/30"><strong class="text-zinc-200">Startup performance</strong> — removed blocking <code class="bg-zinc-800 px-1.5 py-0.5 rounded text-sm text-zinc-300">reg.exe</code> process spawn; fingerprint computed instantly from environment variables with <code class="bg-zinc-800 px-1.5 py-0.5 rounded text-sm text-zinc-300">OnceLock</code> caching, eliminating 5-second lag on every launch</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-zinc-800/50 my-16"></div>
 
     <!-- v0.2.0 -->
     <div class="mb-16">
