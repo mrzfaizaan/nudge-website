@@ -7,9 +7,9 @@ All notable changes to Nudge will be documented in this file.
 ## [0.2.1] — 2026-06-05
 
 ### Fixed
-- **Trial hardening** — five critical bypass vectors closed: localStorage short-circuit removed (frontend always validates via Rust backend first); plain-text "LICENSED" sentinel replaced with HMAC-signed token binding status + fingerprint + timestamp; multi-location storage (shadow copy of trial state in `state.json` for tamper-resistant cross-check, restoring from shadow if `.sys_time` is deleted or tampered); system clock rollback detection (max observed timestamp tracked, backward time jumps trigger expiry); periodic license re-validation (licensed installs re-verify with Lemon Squeezy every 3 days, 7-day offline grace period, server-side revocation clears license)
-- **Machine fingerprinting** — trial identity now binds to `hostname + COMPUTERNAME + USERNAME` hash, preventing trial reset via hostname change or registry drift
-- **Startup performance** — removed blocking `reg.exe` process spawn; fingerprint computed instantly from environment variables with `OnceLock` caching, eliminating 5-second lag on every launch
+- **Trial hardening** — strengthened license validation against tampering and replay; added server-side license re-validation with offline fallback
+- **Machine fingerprinting** — improved identity binding for trial tracking
+- **Startup performance** — removed blocking external process spawn; license checks now run instantly, eliminating 5-second lag on every launch
 
 ---
 
