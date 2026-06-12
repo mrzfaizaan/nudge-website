@@ -4,6 +4,18 @@ All notable changes to Nudge will be documented in this file.
 
 ---
 
+## [0.2.2] — 2026-06-12
+
+### Fixed
+- **Duplicate sub-heading parsing** — identical sub-heading names (e.g. `## Content` appearing under multiple `#` parent headings) were clubbed into a single section in the expanded view. Root cause: headings were deduplicated by name in `parse_task_file()`, and `parse_result_to_document()` grouped tasks by immediate heading name into a `HashMap`. Both now use the full hierarchical path (`heading_path.join(" > ")`) as the unique identifier, ensuring `"June 2026 > Content"` and `"July 2026 > Content"` remain separate sections. `Section.name` stays as the display-friendly last component.
+- **Empty section on file open** — files whose first section is a bare parent heading (like `# June 2026`) with no direct tasks opened with "All tasks complete!" because the navigation state initialized to `(section 0, task 0)` before finding the first real task. Fixed by auto-advancing past empty parent headings via `cmd_navigate_task("first")` before rendering, in all three file-opening flows (`onOpenFile`, `onNewFile`, context menu handler).
+- **Add-task scroll position** — hitting Enter in the expanded view's "Add task" input jumped scroll to top due to a hardcoded `expandedTaskList.scrollTop = 0` in `onAddTask()` that overrode `renderExpanded()`'s internal save/restore. Removed the hardcoded line.
+- **Preserve formatting in both input paths** — the top "Add task" input and right-click "Add Task Below" both ignored the `edit_task_mode` setting. Replaced `classifyInput()` with `applyFormatMode()` + `hasExplicitFormat()`: in "preserve" mode, bare text inherits the context task's format (bullet, action, plain); in "full" mode, bare text passes through as-is; explicit prefixes (`#`, `* `, `[ ]`, `1.`) always pass through (enables heading insertion from any context). Right-click flow now uses a DOM-only inline input with no file placeholder — commit calls `cmd_insert_task_after` once with fully formatted text, cancel removes the DOM element (no dangling line).
+- **Settings/Info browser context menu** — the settings and info views showed the browser's default right-click menu (Refresh, Save As, Share, Print). Added `preventDefault()` handlers to suppress the browser menu on both views.
+- **Expanded view stale on file open** — opening a new file while the expanded view was open left it displaying the previous file's content. All three file-opening flows now call `renderExpanded()` after `render()` when the expanded view is open.
+
+---
+
 ## [0.2.1] — 2026-06-05
 
 ### Fixed

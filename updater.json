@@ -1,10 +1,10 @@
 {
-  "version": "0.2.1",
-  "notes": "Trial hardening: eliminates localStorage bypass, plain-text license forgery, clock rollback, and file-deletion reset. Machine fingerprinting with cached identity for zero-lag startup. License re-validation every 3 days.",
-  "pub_date": "2026-06-05T00:00:00Z",
+  "version": "0.2.2",
+  "notes": "Bug fixes: duplicate sub-heading parsing (same ## names under different # parents now separate correctly), empty parent headings no longer show 'All tasks complete!', add-task scroll position preserved, preserve/full formatting modes now respected in both input paths, settings/info right-click menus suppressed, expanded view now updates immediately when a new file is opened.",
+  "pub_date": "2026-06-12T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNThVS01TakVwQ1dWRmcraGt4cHltUFd6MkN2bHVTZUZqcXdSUmRBRW11MlNnUzdlL3Myc2ZVeFBYZ2hvNWwvSXRXVGhDYkpMSHBKMkNDZDlPdndnRWRZVTdWZ00zYUE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgwNjQ5ODE1CWZpbGU6TnVkZ2VfMC4yLjFfeDY0LXNldHVwLmV4ZQpWUVVETml3ZVU2ZCtORHlRTXM3WTdCSnUwN3o5bWZTVVBiQ3ZrcVkxNlpLbmVvV0t6L2pwM2tTRmRLcjBpaEg5OUtFTUtjY2tURlFSVkRjcklQdnNCdz09Cg==",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNThVS01TakVwQ2Zha1pBQS9YdnoxWW9iM0ZzWWRRSGdJcHpUZ3EvVGhOcmtMNGk4dW9kbEJJLzd0OU44OWFZU2p2NlM3N2x3OGxYQ3MrUGxKdytOdUtFOUUrNHFMcUFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjczMzYxCWZpbGU6TnVkZ2VfMC4yLjJfeDY0LXNldHVwLmV4ZQpnS05zVEJqM1Fyenl5MHFpSG1ZWkVCSlZCcTdNMjZpQzc3WEZjc3F4R2NQVDFqRXBYSGc5RXJkRlJSZXVMRnQ1bU81OHMwWHRlTWJMMmpzaVBxaTBCZz09Cg==",
       "url": "https://nudgehud.work/downloads/nudge-setup.exe"
     }
   }
