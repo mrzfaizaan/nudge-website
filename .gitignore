@@ -28,6 +28,7 @@ dist-ssr
 
 # Task files
 *.txt
+!llms.txt
 
 # Python
 file_handler.py
