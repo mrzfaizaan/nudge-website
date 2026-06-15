@@ -136,16 +136,21 @@
     <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5 font-mono text-sm text-zinc-300 mb-12 leading-relaxed">
       <span class="text-zinc-600"># Today</span><br>
       <span class="text-zinc-500">## Standup</span><br>
-      <span class="text-zinc-400">* Refactored auth module. PR #142 merged.</span><br>
+      <span class="text-zinc-400">* Merged PR #142 — auth middleware refactor</span><br>
       <span class="text-zinc-400">* Working on rate limiter. ETA EOD.</span><br>
       <span class="text-zinc-400">* Blocked on API spec from backend team.</span><br>
-      <span class="text-zinc-500">## PR Queue</span><br>
-      <span class="text-emerald-400">[ ] Review auth middleware PR #138</span><br>
-      <span class="text-emerald-400">[ ] Review error handling PR #140</span><br>
-      <span class="text-zinc-500">## Current Task</span><br>
+      <span class="text-zinc-500">## Sprint Tasks</span><br>
       <span class="text-emerald-400">[ ] Implement rate limiter for login endpoint</span><br>
-      <span class="text-amber-400">- Max 5 attempts per IP per minute</span><br>
-      <span class="text-amber-400">- Return 429 with Retry-After header</span>
+      <span class="text-emerald-400">[ ] Add unit tests for auth module</span><br>
+      <span class="text-emerald-400">[ ] Review error handling PR #140</span><br>
+      <span class="text-emerald-400">[x] Set up CI pipeline — done</span><br>
+      <span class="text-zinc-500">## Deployment Notes</span><br>
+      <span class="text-white">1. Merge to staging</span><br>
+      <span class="text-white">2. Run integration test suite</span><br>
+      <span class="text-white">3. Deploy to production behind feature flag</span><br>
+      <span class="text-white">4. Monitor error logs for 15 min</span><br>
+      <span class="text-zinc-400">Build log: <span class="text-emerald-400">[CI Pipeline #847](https://github.com/org/repo/actions/runs/847)</span></span><br>
+      <span class="text-zinc-400">PR spec: <span class="text-emerald-400">[Rate limiter spec](https://github.com/org/repo/issues/143)</span></span>
     </div>
 
     <!-- CTA -->

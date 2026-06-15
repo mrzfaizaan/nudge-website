@@ -128,17 +128,26 @@
 
     <h2 class="text-xl font-bold text-white mb-4 tracking-tight">Sample presenter task file</h2>
     <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5 font-mono text-sm text-zinc-300 mb-12 leading-relaxed">
-      <span class="text-zinc-600"># Product Launch Keynote</span><br>
-      <span class="text-zinc-500">## Opening</span><br>
-      <span class="text-amber-400">- "Last year, our users told us one thing..."</span><br>
-      <span class="text-amber-400">- Share the survey stat: 73% wanted faster export</span><br>
+      <span class="text-zinc-600"># PyCon 2026 — Lightning Talk</span><br>
+      <span class="text-zinc-500">## Pre-Show Checklist</span><br>
+      <span class="text-white">1. Test lapel mic with AV team</span><br>
+      <span class="text-white">2. Advance to slide 1 — confirm resolution</span><br>
+      <span class="text-white">3. Share screen with presenter view ON</span><br>
+      <span class="text-white">4. Start screen recording</span><br>
+      <span class="text-zinc-400">Slides: <span class="text-emerald-400">[Rust + Python Interop](https://slides.com/user/pycon2026)</span></span><br>
+      <span class="text-zinc-500">## Talk Flow</span><br>
+      <span class="text-zinc-400">* Opening: "Rust found a bug that Python hid for 3 years."</span><br>
+      <span class="text-zinc-400">* Problem: serialization took 30s per request. Unacceptable.</span><br>
+      <span class="text-zinc-400">* Solution: wrote a Rust extension. 0.3s. 100x improvement.</span><br>
+      <span class="text-zinc-400">* Demo: show before/after benchmark live.</span><br>
       <span class="text-zinc-500">## Demo Sequence</span><br>
-      <span class="text-emerald-400">[ ] Show login screen — note the new SSO button</span><br>
-      <span class="text-emerald-400">[ ] Navigate to Reports → Export</span><br>
-      <span class="text-emerald-400">[ ] Export CSV — point out 3x speed improvement</span><br>
-      <span class="text-zinc-500">## Closing</span><br>
-      <span class="text-amber-400">- Available today. Free trial at nudgehud.work</span><br>
-      <span class="text-amber-400">- Q&A: "We'll take questions at booth 42"</span>
+      <span class="text-emerald-400">[ ] Open terminal — split screen with slides</span><br>
+      <span class="text-emerald-400">[ ] Run baseline: python slow_parser.py — watch clock</span><br>
+      <span class="text-emerald-400">[ ] Switch to Rust: python fast_parser.py — show sub-second</span><br>
+      <span class="text-zinc-500">## Q&A Prep</span><br>
+      <span class="text-zinc-400">* "Why not Cython?" — 400-line parser. Rust was simpler.</span><br>
+      <span class="text-zinc-400">* "Works on Windows?" — Yes. CI tests all three platforms.</span><br>
+      <span class="text-zinc-400">* "What about async?" — Extension runs off the main thread.</span>
     </div>
 
     <div class="text-center pt-8 border-t border-zinc-800/50">
