@@ -224,5 +224,17 @@
 
   </div>
 
+  <script>
+    function gtagEvent(name, params) {
+      if (typeof gtag === 'function') { gtag('event', name, params); }
+    }
+    document.querySelectorAll('a[href*="#download"]').forEach(el => {
+      el.addEventListener('click', () => gtagEvent('click_cta', { page: 'compare/todoist' }));
+    });
+    document.querySelectorAll('nav a[href*=".html"]').forEach(el => {
+      el.addEventListener('click', () => gtagEvent('click_nav', { target: el.getAttribute('href') }));
+    });
+  </script>
+
 </body>
 </html>

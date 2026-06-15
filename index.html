@@ -586,6 +586,42 @@
   </div>
 
   <script>
+    // --- GA4 Event Tracking ---
+    function gtagEvent(name, params) {
+      if (typeof gtag === 'function') { gtag('event', name, params); }
+    }
+
+    // CTA clicks
+    document.querySelectorAll('a[href*="buy.nudgehud.work"]').forEach(el => {
+      el.addEventListener('click', () => gtagEvent('click_buy_now', { location: el.closest('section')?.id || 'unknown' }));
+    });
+    document.querySelectorAll('a[href$="nudge-setup.exe"]').forEach(el => {
+      el.addEventListener('click', () => gtagEvent('click_trial_download'));
+    });
+
+    // Sidebar nav clicks
+    document.querySelectorAll('[data-nav-link]').forEach(el => {
+      el.addEventListener('click', () => gtagEvent('click_nav', { target: el.dataset.navLink }));
+    });
+    document.querySelectorAll('nav a[href*=".html"]').forEach(el => {
+      if (!el.dataset.navLink) el.addEventListener('click', () => gtagEvent('click_nav', { target: el.getAttribute('href') }));
+    });
+
+    // Section visibility (fires once per section at 30% visibility)
+    let sectionsSeen = {};
+    document.querySelectorAll('section[id]').forEach(s => {
+      const obs = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && !sectionsSeen[s.id]) {
+          sectionsSeen[s.id] = true;
+          gtagEvent('view_section', { section: s.id });
+          obs.disconnect();
+        }
+      }, { threshold: 0.3 });
+      obs.observe(s);
+    });
+  </script>
+
+  <script>
     const navLinks = document.querySelectorAll('[data-nav-link]');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
