@@ -588,7 +588,12 @@
   <script>
     // --- GA4 Event Tracking ---
     function gtagEvent(name, params) {
-      if (typeof gtag === 'function') { gtag('event', name, params); }
+      if (typeof gtag === 'function') {
+        params = params || {};
+        params.page_location = window.location.href;
+        params.page_path = window.location.pathname;
+        gtag('event', name, params);
+      }
     }
 
     // CTA clicks
