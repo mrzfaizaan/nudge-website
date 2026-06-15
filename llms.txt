@@ -1,0 +1,32 @@
+# Nudge — AI Context
+
+## What is Nudge?
+Nudge is an always-on-top task HUD for Windows. It reads a single .md (Markdown) file and floats your tasks above every window without breaking focus. Built in Rust with Tauri v2. Under 12 MB. No accounts, no cloud, no Electron.
+
+## Who is it for?
+- Engineers who want standup notes and PR queues visible while coding
+- Researchers who need chapter milestones in frame during writing sessions
+- Presenters who want slide notes on their screen, not the audience's
+- Sales professionals managing call agendas
+- Clinicians running exercise sequences and therapy prompts
+- Anyone building a personal productivity system who hates subscriptions
+
+## Key differentiators
+- One-time purchase ($15, or $9 with BETA40). No subscription.
+- Reads your existing .md file in-place. No import, no export, no lock-in.
+- Auto-hides to a 6px strip when not in use.
+- Built in Rust (Tauri v2), not Electron. 11.4 MB install vs 991 MB (Obsidian) or 337 MB (Notion).
+- All data stays on your machine. No cloud, no accounts, no login.
+
+## Key pages
+- Homepage: https://nudgehud.work/
+- Pricing: https://nudgehud.work/pricing.md
+- Changelog: https://nudgehud.work/changelog.html
+- Privacy: https://nudgehud.work/privacy.html
+- Terms: https://nudgehud.work/terms.html
+- Nudge vs Todoist: https://nudgehud.work/compare/todoist.html
+- Nudge for Engineers: https://nudgehud.work/use-cases/engineers.html
+
+## Contact
+- Support: support@nudgehud.work
+- Purchase: https://buy.nudgehud.work

@@ -11,8 +11,11 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NUDGE — The Always-On-Top To-Do List for Windows | One .md File, No Sync Tax, No Accounts</title>
+  <title>NUDGE — Always-On-Top To-Do List for Windows | No Accounts, No Cloud</title>
   <meta http-equiv="content-language" content="en">
+  <link rel="canonical" href="https://nudgehud.work/">
+  <link rel="alternate" hreflang="en" href="https://nudgehud.work/">
+  <link rel="alternate" hreflang="x-default" href="https://nudgehud.work/">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,13 +88,13 @@
     "applicationCategory": "ProductivityApplication",
     "offers": {
       "@type": "Offer",
-      "price": "0.00",
+      "price": "15.00",
       "priceCurrency": "USD"
     },
-    "description": "NUDGE is an always-on-top to-do app for Windows. Under 15 MB install. One .md file, no sync tax. No accounts, no cloud, no Electron."
+    "description": "NUDGE is an always-on-top to-do app for Windows. Under 10 MB install. One .md file, no sync tax. No accounts, no cloud, no Electron."
   }
   </script>
-  <meta name="description" content="NUDGE is an always-on-top to-do app for Windows. Under 15 MB install. One .md file, no sync tax. No accounts, no cloud, no Electron. Keep your tasks visible without breaking your flow state.">
+  <meta name="description" content="NUDGE is an always-on-top to-do app for Windows. Under 10 MB install. One .md file, no sync tax. No accounts, no cloud, no Electron. Keep your tasks visible without breaking your flow state.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
@@ -108,22 +111,75 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nudgehud.work/">
-  <meta property="og:title" content="NUDGE — The Always-On-Top To-Do List for Windows | One .md File, No Sync Tax, No Accounts">
-  <meta property="og:description" content="NUDGE is an always-on-top to-do app for Windows. Under 15 MB install. One .md file, no sync tax. No accounts, no cloud, no Electron. Keep your tasks visible without breaking your flow state.">
+  <meta property="og:title" content="NUDGE — Always-On-Top To-Do List for Windows | No Accounts, No Cloud">
+  <meta property="og:description" content="NUDGE is an always-on-top to-do app for Windows. Under 10 MB install. One .md file, no sync tax. No accounts, no cloud, no Electron. Keep your tasks visible without breaking your flow state.">
   <meta property="og:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png?v=2">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://nudgehud.work/">
-  <meta name="twitter:title" content="NUDGE — The Always-On-Top To-Do List for Windows | One .md File, No Sync Tax, No Accounts">
-  <meta name="twitter:description" content="NUDGE is an always-on-top to-do app for Windows. Under 15 MB install. One .md file, no sync tax. No accounts, no cloud, no Electron. Keep your tasks visible without breaking your flow state.">
+  <meta name="twitter:title" content="NUDGE — Always-On-Top To-Do List for Windows | No Accounts, No Cloud">
+  <meta name="twitter:description" content="NUDGE is an always-on-top to-do app for Windows. Under 10 MB install. One .md file, no sync tax. No accounts, no cloud, no Electron. Keep your tasks visible without breaking your flow state.">
   <meta name="twitter:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png?v=2">
 
 </head>
 <body class="bg-[#09090b] text-zinc-200 antialiased">
 
-  <!-- Fixed Glassy Nav -->
-  <header class="w-full fixed top-0 z-50 bg-zinc-900/50 backdrop-blur-xl border-b border-white/10">
+  <!-- Sidebar Navigation -->
+  <nav class="hidden lg:flex flex-col fixed top-0 left-0 h-screen w-56 z-50 bg-zinc-900/50 backdrop-blur-xl border-r border-white/10 overflow-y-auto">
+    <div class="px-5 pt-6 pb-4">
+      <a href="/" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+    </div>
+    <div class="px-3 flex-1 space-y-0.5">
+      <a href="#download" data-nav-link="download" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Get Nudge</a>
+      <a href="#philosophy" data-nav-link="philosophy" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Philosophy</a>
+      <a href="#video-showcase" data-nav-link="video-showcase" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">How It Works</a>
+      <!-- Features Sub-Nav -->
+      <details class="group" open>
+        <summary class="block px-3 py-1.5 text-sm rounded-md cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5 list-none select-none">
+          <span class="flex items-center justify-between">
+            Features
+            <span class="text-xs font-mono transition-transform group-open:rotate-90">&#9656;</span>
+          </span>
+        </summary>
+        <div class="ml-2 space-y-0.5 pt-0.5">
+          <a href="#llm-assistant" data-nav-link="llm-assistant" class="block px-3 py-1.5 text-xs rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-500 hover:text-white hover:bg-white/5">LLM Assistant</a>
+          <a href="#features" data-nav-link="features" class="block px-3 py-1.5 text-xs rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-500 hover:text-white hover:bg-white/5">Task Engine</a>
+          <a href="#hud-controls" data-nav-link="hud-controls" class="block px-3 py-1.5 text-xs rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-500 hover:text-white hover:bg-white/5">HUD Controls</a>
+        </div>
+      </details>
+      <a href="#no-bloat" data-nav-link="no-bloat" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">No Bloat</a>
+      <a href="#why-onetime" data-nav-link="why-onetime" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Why Nudge?</a>
+      <a href="#pricing" data-nav-link="pricing" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Pricing</a>
+      <a href="#use-cases" data-nav-link="use-cases" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Who Uses It</a>
+      <div class="pt-3 pb-1">
+        <span class="block px-3 py-1 text-xs font-medium text-zinc-600 uppercase tracking-wider">Compare</span>
+      </div>
+      <a href="./compare/todoist.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">vs Todoist</a>
+      <div class="pt-3 pb-1">
+        <span class="block px-3 py-1 text-xs font-medium text-zinc-600 uppercase tracking-wider">Use Cases</span>
+      </div>
+      <a href="./use-cases/engineers.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">For Engineers</a>
+    </div>
+    <div class="px-3 pb-3 mt-auto">
+      <div class="border-t border-white/10 pt-3 space-y-0.5">
+        <a href="./changelog.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-500 hover:text-white hover:bg-white/5">Changelog</a>
+        <div class="flex gap-1 px-3 py-1.5">
+          <a href="./privacy.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Privacy</a>
+          <span class="text-zinc-700 text-xs">&middot;</span>
+          <a href="./terms.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-3 border-t border-white/10">
+      <a href="mailto:support@nudgehud.work" class="text-xs text-zinc-500 hover:text-zinc-400 transition-colors block truncate">support@nudgehud.work</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Top Bar -->
+  <header class="lg:hidden w-full fixed top-0 z-50 bg-zinc-900/50 backdrop-blur-xl border-b border-white/10">
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="/" class="text-2xl font-bold text-white lowercase tracking-tight">
         nudge<span class="text-emerald-500">.</span>
@@ -134,6 +190,7 @@
     </div>
   </header>
 
+  <div class="lg:ml-56">
   <!-- Hero Section (Two-Column Split) -->
   <section class="max-w-7xl mx-auto px-6 pt-40 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
     <div class="text-left">
@@ -141,28 +198,28 @@
         <span>n</span><span class="typing-text">udge</span><span class="emerald-dot">.</span>
       </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
-          Your To-Do List. Always On Top.
+          Your tasks. Always on screen. Zero distractions.
         </h1>
  
        <!-- 3 Hook Lines -->
        <div class="mt-8 space-y-4">
          <div class="flex items-start gap-3">
            <span class="w-0.5 h-6 bg-emerald-500/60 rounded-full flex-shrink-0 mt-1.5"></span>
-           <p class="text-zinc-400 leading-relaxed">A productivity tool that floats your tasks on screen. No alt-tabbing to check your list.</p>
+           <p class="text-zinc-400 leading-relaxed">Stop breaking focus to check your list. Nudge floats your tasks above every window so your next step is always visible.</p>
          </div>
          <div class="flex items-start gap-3">
            <span class="w-0.5 h-6 bg-emerald-500/40 rounded-full flex-shrink-0 mt-1.5"></span>
-            <p class="text-zinc-400 leading-relaxed">One <code class="text-emerald-400/80 bg-emerald-400/5 px-1 rounded text-sm">.md</code> file as your source of truth. Reads in-place — no sync, no duplication. Auto-hides to a 6&nbsp;px strip when you&rsquo;re focused.</p>
+            <p class="text-zinc-400 leading-relaxed">One <code class="text-emerald-400/80 bg-emerald-400/5 px-1 rounded text-sm">.md</code> file. Reads in-place. No sync, no accounts, no cloud. Auto-hides to a 6&nbsp;px strip when you want it gone.</p>
          </div>
          <div class="flex items-start gap-3">
            <span class="w-0.5 h-6 bg-emerald-500/20 rounded-full flex-shrink-0 mt-1.5"></span>
-           <p class="text-zinc-400 leading-relaxed">Under 10&nbsp;MB install. No accounts. No cloud. No Electron. Just your tasks.</p>
+           <p class="text-zinc-400 leading-relaxed">Under 10&nbsp;MB install. One purchase, free updates for life. Built in Rust, not Electron.</p>
          </div>
        </div>
  
        <!-- Tech Credibility Badges -->
        <div class="mt-6 flex flex-wrap gap-2">
-         <span class="text-xs font-mono text-zinc-400 border border-zinc-800 rounded-md px-2 py-0.5">&lt; 15 MB install</span>
+         <span class="text-xs font-mono text-zinc-400 border border-zinc-800 rounded-md px-2 py-0.5">&lt; 10 MB install</span>
          <span class="text-xs font-mono text-zinc-400 border border-zinc-800 rounded-md px-2 py-0.5">Tauri v2</span>
          <span class="text-xs font-mono text-zinc-400 border border-zinc-800 rounded-md px-2 py-0.5">No Electron</span>
          <span class="text-xs font-mono text-zinc-400 border border-zinc-800 rounded-md px-2 py-0.5">Vanilla JS</span>
@@ -171,7 +228,7 @@
        <!-- CTAs -->
        <div id="download" class="scroll-mt-32 mt-10 flex flex-col sm:flex-row gap-4 justify-start">
          <a href="https://buy.nudgehud.work" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all flex items-center justify-center gap-2 cursor-pointer">
-           Buy Now
+            Buy Now — $9
          </a>
           <a href="./downloads/nudge-setup.exe" class="px-6 py-3 border border-white/10 hover:bg-white/5 text-emerald-400 font-medium rounded-lg shadow-[inset_0_-3px_0_rgba(16,185,129,0.7)] transition-all flex items-center justify-center gap-2 cursor-pointer">
             Try free for 7 days
@@ -183,35 +240,47 @@
        </div>
 
 
-      <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-3 text-sm text-left">
-        <span class="text-zinc-400">Limited early access pricing — use code <code class="text-emerald-400">BETA40</code></span>
-      </div>
-      <div class="mt-3">
-        <span class="text-zinc-600 text-xs">One-time purchase. All future updates included.</span>
-      </div>
+       <!-- Pricing Display -->
+       <div class="mt-5 space-y-2 text-left">
+         <div class="flex items-baseline gap-2">
+           <span class="text-zinc-500 line-through text-base">$15</span>
+           <span class="text-2xl font-bold text-white">$9</span>
+           <span class="text-sm text-zinc-400">with code <code class="text-emerald-400 font-mono bg-emerald-400/10 px-2 py-0.5 rounded">BETA40</code></span>
+         </div>
+         <p class="text-zinc-500 text-xs">Early access pricing — 40% off until our 100th sale.</p>
+          <p class="text-zinc-400 text-sm">One purchase. Free updates for life. 14-day refund if it's not for you.</p>
+          <div class="flex items-center gap-2 mt-3">
+            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            <span class="text-zinc-500 text-xs">No credit card. 7-day free trial. Your <code class="text-zinc-600 text-xs">.md</code> file stays yours even if you don't buy.</span>
+          </div>
+          <div class="flex items-center gap-2 mt-2">
+            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span class="text-zinc-500 text-xs">Signed with a minisign keypair. Verified by Tauri's updater. Your machine, your data.</span>
+          </div>
+       </div>
     </div>
     <div class="w-full max-w-lg mx-auto drop-shadow-2xl">
-      <img src="website_handoff/assets/nudge_ad_slate.png?v=2" alt="Nudge ad slate" class="w-full">
+      <img src="website_handoff/assets/nudge_ad_slate.png?v=2" alt="Nudge task HUD floating above a code editor on Windows" class="w-full">
     </div>
   </section>
 
   <!-- Anti-Features Strip -->
-  <section class="w-full max-w-5xl mx-auto px-6 pb-20">
+  <section id="philosophy" class="w-full max-w-5xl mx-auto px-6 pb-20 scroll-mt-20">
     <p class="text-center text-xs font-medium tracking-[0.15em] text-zinc-600 uppercase mb-8">Built for focus. Not for distraction.</p>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-lg p-5 text-center cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-lg p-5 text-center transition-all hover:bg-zinc-800/40">
         <p class="text-white font-semibold text-sm mb-1">No notifications</p>
         <p class="text-zinc-400 text-xs leading-relaxed">Never breaks your flow state. Nudge stays silent.</p>
       </div>
-      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-lg p-5 text-center cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-lg p-5 text-center transition-all hover:bg-zinc-800/40">
         <p class="text-white font-semibold text-sm mb-1">No gamification</p>
         <p class="text-zinc-400 text-xs leading-relaxed">No streaks. No points. No guilt. Just work.</p>
       </div>
-       <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-lg p-5 text-center cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+       <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-lg p-5 text-center transition-all hover:bg-zinc-800/40">
         <p class="text-white font-semibold text-sm mb-1">No sync tax</p>
         <p class="text-zinc-400 text-xs leading-relaxed">One .md file. One source of truth. Stop copying tasks between Slack, Notion, and Jira.</p>
       </div>
-      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-lg p-5 text-center cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-lg p-5 text-center transition-all hover:bg-zinc-800/40">
         <p class="text-white font-semibold text-sm mb-1">No accounts</p>
         <p class="text-zinc-400 text-xs leading-relaxed">No signup. No login. Open a file and go.</p>
       </div>
@@ -228,7 +297,7 @@
   </section>
 
   <!-- LLM Formatting Assistant -->
-  <section class="w-full max-w-4xl mx-auto px-6 pb-24">
+  <section id="llm-assistant" class="w-full max-w-4xl mx-auto px-6 pb-24 scroll-mt-20">
     <h2 class="text-2xl font-bold text-white mb-3 tracking-tight text-center">Messy notes? Nudge cleans them up.</h2>
     <p class="text-center text-zinc-400 text-sm mb-10 max-w-xl mx-auto">
       Nudge gives you a strict formatting-engine prompt. Paste it into any LLM with your raw notes, and get back clean, structured Markdown.
@@ -253,7 +322,7 @@
   </section>
 
   <!-- Engine Section -->
-  <section class="w-full max-w-7xl mx-auto px-6 pb-24">
+  <section id="features" class="w-full max-w-7xl mx-auto px-6 pb-24 scroll-mt-20">
     <h2 class="text-3xl font-bold text-white mb-3 tracking-tight text-center">The Engine.</h2>
     <p class="text-center text-zinc-400 text-sm mb-12 max-w-xl mx-auto">
       Every line of your notes is classified into one of three types. You never think about syntax — Nudge classifies your input and applies the right format automatically.
@@ -300,32 +369,54 @@
 
     <!-- Classification Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm transition-all hover:bg-zinc-800/40">
         <span class="font-mono text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-md inline-block mb-4 text-sm">[ ]</span>
         <h3 class="text-xl font-bold text-white mb-3">Action</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed">Checkbox nodes you can toggle. Click to mark done &mdash; the file on disk updates instantly. Your commitments, tracked.</p>
+        <p class="text-zinc-400 text-sm leading-relaxed">Checkbox nodes you can toggle. Click to mark done. The file on disk updates instantly. Your commitments, tracked.</p>
       </div>
-      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm transition-all hover:bg-zinc-800/40">
         <span class="font-mono text-blue-400 bg-blue-400/10 px-3 py-1 rounded-md inline-block mb-4 text-sm">*</span>
         <h3 class="text-xl font-bold text-white mb-3">Bullet</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed">Reference items that stay visible but can't be toggled. Perfect for notes, context, and reminders you don't want to accidentally mark done.</p>
+        <p class="text-zinc-400 text-sm leading-relaxed">Reference items that stay visible but can't be toggled. Notes, context, and reminders you don't want to accidentally mark done.</p>
       </div>
-      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm transition-all hover:bg-zinc-800/40">
         <span class="font-mono text-amber-400 bg-amber-400/10 px-3 py-1 rounded-md inline-block mb-4 text-sm">-</span>
         <h3 class="text-xl font-bold text-white mb-3">Plain</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed">Passive context. No checkbox, no bullet. For blockers, notes, and ambient information that anchors your workflow.</p>
+        <p class="text-zinc-400 text-sm leading-relaxed">Passive context. No checkbox, no bullet. Blockers, notes, and ambient information that anchors your workflow.</p>
       </div>
-      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-8 backdrop-blur-sm transition-all hover:bg-zinc-800/40">
         <span class="font-mono text-white bg-white/10 px-3 py-1 rounded-md inline-block mb-4 text-sm">1.</span>
         <h3 class="text-xl font-bold text-white mb-3">Numbered List</h3>
-        <p class="text-zinc-400 text-sm leading-relaxed">Ordered sequences for step-by-step procedures. Keeps your execution order intact without manual re-numbering.</p>
+        <p class="text-zinc-400 text-sm leading-relaxed">Ordered sequences for step-by-step procedures. Keeps execution order intact without manual re-numbering.</p>
       </div>
     </div>
   </section>
 
+  <!-- HUD Controls Section (2x2 Grid) -->
+  <section id="hud-controls" class="w-full max-w-4xl mx-auto px-6 pb-24 scroll-mt-20">
+    <h2 class="text-2xl font-bold text-white mb-10 tracking-tight text-center">Complete HUD Control.</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+      <div class="transition-all hover:translate-x-1">
+        <h3 class="text-zinc-200 font-semibold mb-2">Snap to any monitor</h3>
+        <p class="text-sm text-zinc-400 leading-relaxed">Works across multiple displays. Pick left, center, or right on whichever screen you want. Nudge remembers your setup.</p>
+      </div>
+      <div class="transition-all hover:translate-x-1">
+        <h3 class="text-zinc-200 font-semibold mb-2">Disappears when idle</h3>
+        <p class="text-sm text-zinc-400 leading-relaxed">Move your mouse away and Nudge shrinks to a 6&nbsp;px strip. Hover to bring it back. Always there when you need it, invisible when you don't.</p>
+      </div>
+      <div class="transition-all hover:translate-x-1">
+        <h3 class="text-zinc-200 font-semibold mb-2">Three views, one window</h3>
+        <p class="text-sm text-zinc-400 leading-relaxed">Banner mode shows one task at a time. Expand to see the full file. Settings and info panels stay tucked away until you need them.</p>
+      </div>
+      <div class="transition-all hover:translate-x-1">
+        <h3 class="text-zinc-200 font-semibold mb-2">Light or dark, your choice</h3>
+        <p class="text-sm text-zinc-400 leading-relaxed">Matches your operating system theme. Smooth, hardware-accelerated animations keep everything responsive with zero lag.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- Weight Comparison Section -->
-  <section class="w-full max-w-4xl mx-auto px-6 pb-32">
+  <section id="no-bloat" class="w-full max-w-4xl mx-auto px-6 pb-32 scroll-mt-20">
     <h2 class="text-2xl font-bold text-white mb-3 tracking-tight text-center">Built for speed. Not for bloat.</h2>
     <p class="text-center text-zinc-400 text-sm mb-10 max-w-xl mx-auto">
       We believe your tools should stay out of the way. Nudge is a fraction of the size of traditional knowledge bases.
@@ -357,7 +448,7 @@
 
       <!-- Nudge -->
       <div class="grid grid-cols-[auto_1fr_auto] items-center gap-3 px-5 py-4 bg-emerald-500/5">
-        <span class="text-white font-bold w-20">Nudge v0.1.x</span>
+        <span class="text-white font-bold w-20">Nudge v0.2.2</span>
         <div class="w-full bg-zinc-800 h-3 rounded-full overflow-hidden">
           <div class="bg-emerald-500 h-full rounded-full min-w-[8px]" style="width:1.15%"></div>
         </div>
@@ -366,73 +457,112 @@
     </div>
   </section>
 
-  <!-- HUD Controls Section (2x2 Grid) -->
-
-  <section class="w-full max-w-4xl mx-auto px-6 pb-24">
-    <h2 class="text-2xl font-bold text-white mb-10 tracking-tight text-center">Complete HUD Control.</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
-      <div class="cursor-pointer transition-all hover:translate-x-1 focus-ring" tabindex="0">
-        <h3 class="text-zinc-200 font-semibold mb-2">Snap to any monitor</h3>
-        <p class="text-sm text-zinc-400 leading-relaxed">Works across multiple displays. Pick left, center, or right on whichever screen you want. Nudge remembers your setup.</p>
+  <!-- Why One-Time Purchase? -->
+  <section id="why-onetime" class="w-full max-w-4xl mx-auto px-6 pb-20 scroll-mt-20">
+    <h2 class="text-2xl font-bold text-white mb-2 tracking-tight text-center">Buy once. Own it.</h2>
+    <p class="text-center text-zinc-400 text-sm mb-10 max-w-xl mx-auto">
+      Every to-do app charges rent. Nudge is a purchase.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-6 text-center">
+        <p class="text-white font-semibold text-sm mb-1">No subscription</p>
+        <p class="text-zinc-400 text-xs leading-relaxed">Todoist costs $48 a year. TickTick, $36. Nudge costs $15. Once.</p>
       </div>
-      <div class="cursor-pointer transition-all hover:translate-x-1 focus-ring" tabindex="0">
-        <h3 class="text-zinc-200 font-semibold mb-2">Disappears when idle</h3>
-        <p class="text-sm text-zinc-400 leading-relaxed">Move your mouse away and Nudge shrinks to a 6&nbsp;px strip. Hover to bring it back. Always there when you need it, invisible when you don't.</p>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-6 text-center">
+        <p class="text-white font-semibold text-sm mb-1">You own your data</p>
+        <p class="text-zinc-400 text-xs leading-relaxed">Every task lives in a single <code class="text-emerald-400/80 bg-emerald-400/5 px-1 rounded text-xs">.md</code> file on your machine. No server holds your data. Nobody can revoke access.</p>
       </div>
-      <div class="cursor-pointer transition-all hover:translate-x-1 focus-ring" tabindex="0">
-        <h3 class="text-zinc-200 font-semibold mb-2">Three views, one window</h3>
-        <p class="text-sm text-zinc-400 leading-relaxed">Banner mode shows one task at a time. Expand to see the full file. Settings and info panels stay tucked away until you need them.</p>
-      </div>
-      <div class="cursor-pointer transition-all hover:translate-x-1 focus-ring" tabindex="0">
-        <h3 class="text-zinc-200 font-semibold mb-2">Light or dark, your choice</h3>
-        <p class="text-sm text-zinc-400 leading-relaxed">Matches your operating system theme. Smooth, hardware-accelerated animations keep everything responsive with zero lag.</p>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-6 text-center">
+        <p class="text-white font-semibold text-sm mb-1">Free updates forever</p>
+        <p class="text-zinc-400 text-xs leading-relaxed">Auto-scroll, drag-drop reorder, global shortcuts, themes. Every feature we build is yours. No upgrade tiers.</p>
       </div>
     </div>
   </section>
 
-  <!-- Persona Cards -->
-  <section class="w-full max-w-7xl mx-auto px-6 pb-24">
-    <h2 class="text-2xl font-bold text-white mb-2 tracking-tight text-center">Who uses Nudge?</h2>
-    <p class="text-center text-zinc-400 text-sm mb-10">A teleprompter for anyone who needs their next step in sight.</p>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
-        <h3 class="text-white font-semibold mb-1 text-sm">Engineers</h3>
-        <p class="text-zinc-400 text-xs leading-relaxed">Standup talking points and review queues visible while coding &mdash; no alt-tabbing.</p>
+  <!-- Pricing Comparison -->
+  <section id="pricing" class="w-full max-w-4xl mx-auto px-6 pb-24 scroll-mt-20">
+    <h2 class="text-2xl font-bold text-white mb-3 tracking-tight text-center">The real cost of a to-do list.</h2>
+    <p class="text-center text-zinc-400 text-sm mb-10 max-w-xl mx-auto">
+      Most apps charge by the year. Every year. Nudge charges once.
+    </p>
+    <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl overflow-hidden font-mono text-sm">
+      <div class="grid grid-cols-[2fr_1fr_1fr_1fr] items-center gap-6 px-8 py-3 border-b border-zinc-800/50 bg-zinc-900/40 text-zinc-400 text-xs uppercase tracking-wider">
+        <span>Application</span>
+        <span class="text-right">Per Year</span>
+        <span class="text-right">3 Years</span>
+        <span class="text-right">Model</span>
       </div>
-      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="grid grid-cols-[2fr_1fr_1fr_1fr] items-center gap-6 px-8 py-5 border-b border-zinc-800/30">
+        <span class="text-zinc-400">Motion</span>
+        <span class="text-right text-zinc-200">$228</span>
+        <span class="text-right text-zinc-200">$684</span>
+        <span class="text-right text-zinc-500 text-xs">subscription</span>
+      </div>
+      <div class="grid grid-cols-[2fr_1fr_1fr_1fr] items-center gap-6 px-8 py-5 border-b border-zinc-800/30">
+        <span class="text-zinc-400">Todoist Pro</span>
+        <span class="text-right text-zinc-200">$48</span>
+        <span class="text-right text-zinc-200">$144</span>
+        <span class="text-right text-zinc-500 text-xs">subscription</span>
+      </div>
+      <div class="grid grid-cols-[2fr_1fr_1fr_1fr] items-center gap-6 px-8 py-5 border-b border-zinc-800/30">
+        <span class="text-zinc-400">TickTick</span>
+        <span class="text-right text-zinc-200">$36</span>
+        <span class="text-right text-zinc-200">$108</span>
+        <span class="text-right text-zinc-500 text-xs">subscription</span>
+      </div>
+      <div class="grid grid-cols-[2fr_1fr_1fr_1fr] items-center gap-6 px-8 py-5 bg-emerald-500/5">
+        <span class="text-white font-bold">Nudge</span>
+        <span class="text-right text-emerald-400 font-bold">$15</span>
+        <span class="text-right text-emerald-400 font-bold">$15</span>
+        <span class="text-right text-emerald-400 text-xs">one-time</span>
+      </div>
+    </div>
+    <p class="text-center text-zinc-500 text-xs mt-4">Nudge price is the full $15. Competitors shown at annual rates. BETA40 drops it to $9.</p>
+  </section>
+
+  <!-- Persona Cards -->
+  <section id="use-cases" class="w-full max-w-7xl mx-auto px-6 pb-24 scroll-mt-20">
+    <h2 class="text-2xl font-bold text-white mb-2 tracking-tight text-center">Who uses Nudge?</h2>
+    <p class="text-center text-zinc-400 text-sm mb-10">A teleprompter for anyone who needs the next step in view.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 transition-all hover:bg-zinc-800/40">
+        <h3 class="text-white font-semibold mb-1 text-sm">Engineers</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Standup notes and review queues visible while coding. No alt-tabbing.</p>
+      </div>
+      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 transition-all hover:bg-zinc-800/40">
         <h3 class="text-white font-semibold mb-1 text-sm">Researchers</h3>
         <p class="text-zinc-400 text-xs leading-relaxed">Chapter milestones and data collection steps in frame during writing sessions.</p>
       </div>
-      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 transition-all hover:bg-zinc-800/40">
         <h3 class="text-white font-semibold mb-1 text-sm">Presenters</h3>
-        <p class="text-zinc-400 text-xs leading-relaxed">Slide notes on your screen, not the audience&rsquo;s. Script your live demos and keynotes.</p>
+        <p class="text-zinc-400 text-xs leading-relaxed">Slide notes on your screen, not the audience's. Script your live demos.</p>
       </div>
-      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 transition-all hover:bg-zinc-800/40">
         <h3 class="text-white font-semibold mb-1 text-sm">Sales &amp; Client Facing</h3>
         <p class="text-zinc-400 text-xs leading-relaxed">Call agendas and objection responses visible without shuffling papers.</p>
       </div>
-      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 transition-all hover:bg-zinc-800/40">
         <h3 class="text-white font-semibold mb-1 text-sm">Clinical &amp; Therapy</h3>
-        <p class="text-zinc-400 text-xs leading-relaxed">Exercise sequences, speech prompts, and step-by-step procedures &mdash; persistent until done.</p>
+        <p class="text-zinc-400 text-xs leading-relaxed">Exercise sequences and speech prompts. Persistent until done.</p>
       </div>
-      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 cursor-pointer transition-all hover:bg-zinc-800/40 focus-ring" tabindex="0">
+      <div class="bg-zinc-900/20 border border-zinc-800/60 rounded-xl p-6 transition-all hover:bg-zinc-800/40">
         <h3 class="text-white font-semibold mb-1 text-sm">Personal OS</h3>
-        <p class="text-zinc-400 text-xs leading-relaxed">Morning routines, medication reminders, habit stacks &mdash; visible all day, no phone needed.</p>
+        <p class="text-zinc-400 text-xs leading-relaxed">Morning routines, medication reminders, habit stacks. Visible all day.</p>
       </div>
     </div>
   </section>
 
   <!-- Bottom CTA -->
   <section class="w-full max-w-2xl mx-auto px-6 pb-24 text-center">
-    <h2 class="text-2xl font-bold text-white mb-2 tracking-tight">Ready to try it?</h2>
-    <p class="text-zinc-400 text-sm mb-8">Your next task, always in frame. No distractions.</p>
+    <h2 class="text-2xl font-bold text-white mb-2 tracking-tight">Install in 30 seconds. Start in 10.</h2>
+    <p class="text-zinc-400 text-sm mb-8">Download the installer. Open a .md file. Your tasks appear on screen. That's it.</p>
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a href="https://buy.nudgehud.work" class="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all flex items-center justify-center gap-2">
-        Buy Now
+        Buy Now — $9
       </a>
     </div>
-    <p class="text-zinc-600 text-xs mt-4">Use code <code class="text-emerald-500">BETA40</code> for limited early access pricing.</p>
-    <p class="text-zinc-600 text-xs mt-2">One-time purchase. All future updates included.</p>
+    <p class="text-zinc-400 text-sm mt-4">Use code <code class="text-emerald-500">BETA40</code> for 40% off. Early access pricing until our 100th sale.</p>
+    <p class="text-zinc-500 text-xs mt-2">One purchase. Free updates for life. 14-day refund if it's not for you.</p>
   </section>
 
   <!-- Footer -->
@@ -441,6 +571,7 @@
       <p>&copy; 2026 nudge. Available for Windows x64.</p>
       <div class="flex gap-6">
         <a href="./changelog.html" class="hover:text-zinc-300 transition-colors">Changelog</a>
+        <a href="./compare/todoist.html" class="hover:text-zinc-300 transition-colors">Nudge vs Todoist</a>
         <a href="./privacy.html" class="hover:text-zinc-300 transition-colors">Privacy</a>
         <a href="./terms.html" class="hover:text-zinc-300 transition-colors">Terms</a>
       </div>
@@ -451,6 +582,26 @@
       <a href="#" class="hover:text-zinc-300 transition-colors">&uarr; Top</a>
     </div>
   </footer>
+
+  </div>
+
+  <script>
+    const navLinks = document.querySelectorAll('[data-nav-link]');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const link = document.querySelector(`[data-nav-link="${entry.target.id}"]`);
+        if (!link) return;
+        navLinks.forEach(l => { l.classList.remove('text-emerald-400','border-l-emerald-500'); l.classList.add('border-l-transparent','text-zinc-400','text-zinc-500'); });
+        link.classList.add('text-emerald-400','border-l-emerald-500');
+        link.classList.remove('border-l-transparent','text-zinc-400','text-zinc-500');
+        // Open parent details if sub-item is active
+        const details = link.closest('details');
+        if (details) details.open = true;
+      });
+    }, { rootMargin: '-10% 0px -80% 0px' });
+    document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+  </script>
 
 </body>
 </html>

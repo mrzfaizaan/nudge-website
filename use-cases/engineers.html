@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nudge for Engineers — Always-On-Top Task HUD for Coding | No Alt-Tabbing</title>
+  <meta http-equiv="content-language" content="en">
+  <link rel="canonical" href="https://nudgehud.work/use-cases/engineers.html">
+  <link rel="alternate" hreflang="en" href="https://nudgehud.work/use-cases/engineers.html">
+  <link rel="alternate" hreflang="x-default" href="https://nudgehud.work/use-cases/engineers.html">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>body{font-family:'Inter',sans-serif}</style>
+  <meta name="description" content="Nudge for engineers: an always-on-top HUD that shows your standup notes, PR queue, and current task while you code. No alt-tabbing. Under 10MB. Reads a .md file.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nudgehud.work/use-cases/engineers.html">
+  <meta property="og:title" content="Nudge for Engineers — Always-On-Top Task HUD While Coding">
+  <meta property="og:description" content="Keep your standup notes, PR queue, and current task visible on screen while you code. No alt-tabbing, no context switching.">
+  <meta property="og:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nudgehud.work/use-cases/engineers.html">
+  <meta name="twitter:title" content="Nudge for Engineers — Always-On-Top Task HUD While Coding">
+  <meta name="twitter:description" content="Keep your standup notes, PR queue, and current task visible on screen while you code. No alt-tabbing.">
+  <meta name="twitter:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Nudge for Engineers",
+    "description": "How engineers use Nudge to keep standup notes, PR queues, and current tasks visible while coding without alt-tabbing."
+  }
+  </script>
+</head>
+<body class="bg-[#09090b] text-zinc-200 antialiased">
+
+  <!-- Sidebar Navigation -->
+  <nav class="hidden lg:flex flex-col fixed top-0 left-0 h-screen w-56 z-50 bg-zinc-900/50 backdrop-blur-xl border-r border-white/10 overflow-y-auto">
+    <div class="px-5 pt-6 pb-4">
+      <a href="../index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+    </div>
+    <div class="px-3 flex-1 space-y-0.5">
+      <a href="../index.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Home</a>
+      <a href="../index.html#why-onetime" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Why Nudge?</a>
+      <a href="../compare/todoist.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">vs Todoist</a>
+    </div>
+    <div class="px-3 pb-3 mt-auto">
+      <div class="border-t border-white/10 pt-3 space-y-0.5">
+        <a href="../changelog.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-500 hover:text-white hover:bg-white/5">Changelog</a>
+        <div class="flex gap-1 px-3 py-1.5">
+          <a href="../privacy.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Privacy</a>
+          <span class="text-zinc-700 text-xs">&middot;</span>
+          <a href="../terms.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-4 border-t border-white/10">
+      <a href="mailto:support@nudgehud.work" class="text-xs text-zinc-500 hover:text-zinc-400 transition-colors block truncate">support@nudgehud.work</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Top Bar -->
+  <header class="lg:hidden w-full fixed top-0 z-50 bg-zinc-900/50 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+      <a href="../index.html#download" class="border border-white/10 hover:bg-white/5 rounded-md px-4 py-2 text-sm transition-all">
+        Get Nudge
+      </a>
+    </div>
+  </header>
+
+  <div class="lg:ml-56">
+  <section class="max-w-3xl mx-auto px-6 pt-32 pb-20">
+    <h1 class="text-4xl font-bold text-white mb-2 tracking-tight">Nudge for Engineers</h1>
+    <p class="text-zinc-400 text-sm mb-12">Keep your standup notes, PR queue, and current task visible on screen while you code. No alt-tabbing. No context switching.</p>
+
+    <!-- The Problem -->
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">The problem with coding and to-do lists</h2>
+    <div class="space-y-4 text-zinc-400 text-sm leading-relaxed mb-10">
+      <p>You're deep in a refactor. You remember you need to review a PR. You alt-tab to Notion. Notion loads. You find the page. You check the task. You alt-tab back to your editor. You've lost your mental stack.</p>
+      <p>Every context switch costs you 10-15 minutes of productive flow. Over a day of coding, that adds up to hours lost. Your brain spends more time reloading context than actually working.</p>
+      <p>Nudge fixes this by floating your task list on screen. It sits above every window. Your standup notes, your PR queue, your current task. Always visible. No tab switching.</p>
+    </div>
+
+    <!-- How Engineers Use Nudge -->
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">How engineers use Nudge</h2>
+    <div class="space-y-4 mb-10">
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Standup prep</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Keep yesterday's achievements and today's plan in a <code class="text-emerald-400/80 bg-emerald-400/5 px-1 rounded text-xs">standup.md</code> file. Nudge shows it above your editor. Walk into standup already rehearsed.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">PR review queue</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">List PRs that need review as checkbox tasks. Toggle them done as you go. The banner reminds you to check the queue between coding sessions.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Bug bash tracker</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Drop bug reports into a .md file. Nudge shows the current one on screen. Mark them done as you fix them. No spreadsheet, no Jira tab.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Deep work anchor</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">When you start a 2-hour deep work block, write your single objective. Nudge keeps it in your peripheral vision. The auto-hide strip disappears when you don't need it. Hover to check in.</p>
+      </div>
+    </div>
+
+    <!-- Why engineers choose Nudge -->
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">Why Nudge fits an engineer's workflow</h2>
+    <div class="space-y-3 text-zinc-400 text-sm leading-relaxed mb-10">
+      <p><strong class="text-white">It reads a .md file.</strong> You probably already have notes in Markdown. Nudge reads the file in-place. No import, no export, no vendor lock-in. Version control your tasks alongside your code.</p>
+      <p><strong class="text-white">It's under 10 MB.</strong> Built in Rust with Tauri v2. No Electron, no Chromium, no bloat. One process, minimal memory.</p>
+      <p><strong class="text-white">Auto-hides when you don't need it.</strong> Shrinks to a 6 px strip when your mouse moves away. Hover to bring it back. There when you want it. Invisible when you're in flow.</p>
+      <p><strong class="text-white">Global keyboard shortcut.</strong> Ctrl+Alt+Shift+N advances to the next task globally. Even when Nudge isn't focused. Configurable.</p>
+      <p><strong class="text-white">No accounts. No cloud.</strong> Your tasks stay on your machine. No server holds your code review notes or bug lists. Privacy by design.</p>
+    </div>
+
+    <!-- File structure -->
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">Sample engineer task file</h2>
+    <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5 font-mono text-sm text-zinc-300 mb-12 leading-relaxed">
+      <span class="text-zinc-600"># Today</span><br>
+      <span class="text-zinc-500">## Standup</span><br>
+      <span class="text-zinc-400">* Refactored auth module. PR #142 merged.</span><br>
+      <span class="text-zinc-400">* Working on rate limiter. ETA EOD.</span><br>
+      <span class="text-zinc-400">* Blocked on API spec from backend team.</span><br>
+      <span class="text-zinc-500">## PR Queue</span><br>
+      <span class="text-emerald-400">[ ] Review auth middleware PR #138</span><br>
+      <span class="text-emerald-400">[ ] Review error handling PR #140</span><br>
+      <span class="text-zinc-500">## Current Task</span><br>
+      <span class="text-emerald-400">[ ] Implement rate limiter for login endpoint</span><br>
+      <span class="text-amber-400">- Max 5 attempts per IP per minute</span><br>
+      <span class="text-amber-400">- Return 429 with Retry-After header</span>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center pt-8 border-t border-zinc-800/50">
+      <p class="text-zinc-400 text-sm mb-4">Stop alt-tabbing to check your list. Keep your tasks on screen.</p>
+      <a href="../index.html#download" class="inline-block px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all">Try Nudge free for 7 days</a>
+      <p class="text-zinc-600 text-xs mt-3">$15 one-time. Free updates for life. No accounts.</p>
+    </div>
+  </section>
+
+  <footer class="w-full border-t border-zinc-800/50 bg-zinc-900/20">
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center text-sm text-zinc-400 gap-4">
+      <p>&copy; 2026 nudge. Available for Windows x64.</p>
+      <div class="flex gap-6">
+        <a href="../index.html" class="hover:text-zinc-300 transition-colors">Home</a>
+        <a href="../changelog.html" class="hover:text-zinc-300 transition-colors">Changelog</a>
+        <a href="../privacy.html" class="hover:text-zinc-300 transition-colors">Privacy</a>
+        <a href="../terms.html" class="hover:text-zinc-300 transition-colors">Terms</a>
+      </div>
+      <a href="mailto:support@nudgehud.work" class="text-emerald-400 hover:underline transition-colors">support@nudgehud.work</a>
+    </div>
+  </footer>
+
+  </div>
+
+</body>
+</html>

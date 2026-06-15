@@ -13,6 +13,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terms of Service | NUDGE Native Windows Task HUD</title>
   <meta http-equiv="content-language" content="en">
+  <link rel="canonical" href="https://nudgehud.work/terms.html">
+  <link rel="alternate" hreflang="en" href="https://nudgehud.work/terms.html">
+  <link rel="alternate" hreflang="x-default" href="https://nudgehud.work/terms.html">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,21 +49,48 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nudgehud.work/terms.html">
   <meta property="og:title" content="Terms of Service — nudge">
-  <meta property="og:description" content="Terms of Service for nudge — the ambient HUD for high-stakes focus.">
+  <meta property="og:description" content="Nudge terms of service. One-time purchase, 14-day refund, all updates included.">
   <meta property="og:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://nudgehud.work/terms.html">
   <meta name="twitter:title" content="Terms of Service — nudge">
-  <meta name="twitter:description" content="Terms of Service for nudge — the ambient HUD for high-stakes focus.">
+  <meta name="twitter:description" content="Nudge terms of service. One-time purchase, 14-day refund, all updates included.">
   <meta name="twitter:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png">
 
 </head>
 <body class="bg-[#09090b] text-zinc-200 antialiased">
 
-  <!-- Fixed Glassy Nav -->
-  <header class="w-full fixed top-0 z-50 bg-zinc-900/50 backdrop-blur-xl border-b border-white/10">
+  <!-- Sidebar Navigation -->
+  <nav class="hidden lg:flex flex-col fixed top-0 left-0 h-screen w-56 z-50 bg-zinc-900/50 backdrop-blur-xl border-r border-white/10 overflow-y-auto">
+    <div class="px-5 pt-6 pb-4">
+      <a href="./index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+    </div>
+    <div class="px-3 flex-1 space-y-0.5">
+      <a href="./index.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Home</a>
+      <a href="./compare/todoist.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">vs Todoist</a>
+      <a href="./use-cases/engineers.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">For Engineers</a>
+    </div>
+    <div class="px-3 pb-3 mt-auto">
+      <div class="border-t border-white/10 pt-3 space-y-0.5">
+        <a href="./changelog.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-500 hover:text-white hover:bg-white/5">Changelog</a>
+        <div class="flex gap-1 px-3 py-1.5">
+          <a href="./privacy.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Privacy</a>
+          <span class="text-zinc-700 text-xs">&middot;</span>
+          <a href="./terms.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-4 border-t border-white/10">
+      <a href="mailto:support@nudgehud.work" class="text-xs text-zinc-500 hover:text-zinc-400 transition-colors block truncate">support@nudgehud.work</a>
+    </div>
+  </nav>
+
+  <!-- Mobile Top Bar -->
+  <header class="lg:hidden w-full fixed top-0 z-50 bg-zinc-900/50 backdrop-blur-xl border-b border-white/10">
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="./index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
         nudge<span class="text-emerald-500">.</span>
@@ -71,6 +101,7 @@
     </div>
   </header>
 
+  <div class="lg:ml-56">
   <!-- Terms of Service Content -->
   <section class="max-w-3xl mx-auto px-6 pt-32 pb-20">
     <h1 class="text-4xl font-bold text-white mb-2 tracking-tight">Terms of Service</h1>
@@ -167,6 +198,8 @@
       <a href="#" class="hover:text-zinc-300 transition-colors">&uarr; Top</a>
     </div>
   </footer>
+
+  </div>
 
 </body>
 </html>
