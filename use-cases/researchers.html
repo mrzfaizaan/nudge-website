@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nudge for Researchers — Always-On-Top Task HUD for Writing & Research | No Alt-Tabbing</title>
+  <meta http-equiv="content-language" content="en">
+  <link rel="canonical" href="https://nudgehud.work/use-cases/researchers.html">
+  <link rel="alternate" hreflang="en" href="https://nudgehud.work/use-cases/researchers.html">
+  <link rel="alternate" hreflang="x-default" href="https://nudgehud.work/use-cases/researchers.html">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>body{font-family:'Inter',sans-serif}</style>
+  <meta name="description" content="Nudge for researchers: keep chapter milestones, literature review checklists, and data collection steps visible while writing. No alt-tabbing. Reads .md files.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nudgehud.work/use-cases/researchers.html">
+  <meta property="og:title" content="Nudge for Researchers — Task HUD While Writing & Researching">
+  <meta property="og:description" content="Keep chapter milestones and data collection steps visible on screen during writing sessions. No context switching.">
+  <meta property="og:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nudgehud.work/use-cases/researchers.html">
+  <meta name="twitter:title" content="Nudge for Researchers — Task HUD While Writing & Researching">
+  <meta name="twitter:description" content="Keep chapter milestones and data collection steps visible on screen during writing sessions.">
+  <meta name="twitter:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Nudge for Researchers",
+    "description": "How researchers use Nudge to keep chapter milestones, literature reviews, and data collection steps visible while writing without alt-tabbing."
+  }
+  </script>
+</head>
+<body class="bg-[#09090b] text-zinc-200 antialiased">
+
+  <nav class="hidden lg:flex flex-col fixed top-0 left-0 h-screen w-56 z-50 bg-zinc-900/50 backdrop-blur-xl border-r border-white/10 overflow-y-auto">
+    <div class="px-5 pt-6 pb-4">
+      <a href="../index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+    </div>
+    <div class="px-3 flex-1 space-y-0.5">
+      <a href="../index.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Home</a>
+      <a href="../index.html#why-onetime" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Why Nudge?</a>
+      <a href="../compare/todoist.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">vs Todoist</a>
+      <a href="../use-cases/engineers.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">For Engineers</a>
+    </div>
+    <div class="px-3 pb-3 mt-auto">
+      <div class="border-t border-white/10 pt-3 space-y-0.5">
+        <a href="../changelog.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-500 hover:text-white hover:bg-white/5">Changelog</a>
+        <div class="flex gap-1 px-3 py-1.5">
+          <a href="../privacy.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Privacy</a>
+          <span class="text-zinc-700 text-xs">&middot;</span>
+          <a href="../terms.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-3 border-t border-white/10">
+      <a href="mailto:support@nudgehud.work" class="text-xs text-zinc-500 hover:text-zinc-400 transition-colors block truncate">support@nudgehud.work</a>
+    </div>
+  </nav>
+
+  <header class="lg:hidden w-full fixed top-0 z-50 bg-zinc-900/50 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+      <a href="../index.html#download" class="border border-white/10 hover:bg-white/5 rounded-md px-4 py-2 text-sm transition-all">
+        Get Nudge
+      </a>
+    </div>
+  </header>
+
+  <div class="lg:ml-56">
+  <section class="max-w-3xl mx-auto px-6 pt-32 pb-20">
+    <h1 class="text-4xl font-bold text-white mb-2 tracking-tight">Nudge for Researchers</h1>
+    <p class="text-zinc-400 text-sm mb-12">Keep chapter milestones, literature review checklists, and data collection steps visible while you write. No alt-tabbing. No context switching.</p>
+
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">The problem with research and to-do lists</h2>
+    <div class="space-y-4 text-zinc-400 text-sm leading-relaxed mb-10">
+      <p>You're 2,000 words into a chapter. You remember a citation you need to check. You switch to Zotero. Find the paper. Note the reference. Switch to Obsidian. Add it to your notes. Switch back to your draft. Where were you?</p>
+      <p>Research is a cascade of context switches. Literature review. Data collection. Writing. Revisions. Citations. Every switch costs momentum. Over a writing session, the mental overhead of tracking what you're supposed to be doing is as draining as the work itself.</p>
+      <p>Nudge keeps the current step visible above your writing window. No tab hunting. No search for the right note. Your next milestone sits at the top of your screen.</p>
+    </div>
+
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">How researchers use Nudge</h2>
+    <div class="space-y-4 mb-10">
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Chapter milestones</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Break your dissertation or paper into chapter-level milestones. Each chapter gets a heading. Each section gets a checkbox. Nudge shows the current one. Check it off and advance to the next.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Literature review tracker</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">List papers to review as tasks. Mark them done as you go. Keep reading notes in the same <code class="text-emerald-400/80 bg-emerald-400/5 px-1 rounded text-xs">.md</code> file. Obsidian and Zettelkasten users can point Nudge at existing vault files.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Data collection pipeline</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Track data collection steps as numbered lists. Survey sent. Responses collected. Analysis complete. Each stage visible. Nothing forgotten between meetings with your advisor.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Writing session anchor</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Start a 2-hour writing block with a single objective on screen. Nudge auto-hides to a 6 px strip when your mouse moves away. Hover to check in. No break in flow.</p>
+      </div>
+    </div>
+
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">Why Nudge fits a researcher's workflow</h2>
+    <div class="space-y-3 text-zinc-400 text-sm leading-relaxed mb-10">
+      <p><strong class="text-white">It reads .md files.</strong> If you use Obsidian or any markdown-based note system, Nudge integrates directly. Point it at an existing file. No import. No duplication.</p>
+      <p><strong class="text-white">Auto-hides during deep reading.</strong> When you switch to reading a paper, the HUD disappears. Hover to bring it back. No persistent visual noise.</p>
+      <p><strong class="text-white">No cloud. No privacy concerns.</strong> Research notes, unpublished data, draft manuscripts — everything stays on your machine. No server ever sees your work.</p>
+      <p><strong class="text-white">Global keyboard shortcut.</strong> Ctrl+Alt+Shift+N advances to the next task without touching the mouse. Keep your hands on the keyboard.</p>
+      <p><strong class="text-white">LLM formatting assistant.</strong> Paste raw research notes into any LLM with Nudge's formatting prompt. Get structured Markdown with proper headings and task types.</p>
+    </div>
+
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">Sample researcher task file</h2>
+    <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5 font-mono text-sm text-zinc-300 mb-12 leading-relaxed">
+      <span class="text-zinc-600"># Dissertation</span><br>
+      <span class="text-zinc-500">## Chapter 4: Results</span><br>
+      <span class="text-emerald-400">[ ] Draft section 4.1 — participant demographics</span><br>
+      <span class="text-emerald-400">[ ] Create Table 4.2 — regression results</span><br>
+      <span class="text-emerald-400">[ ] Write interpretation paragraph for Figure 4.3</span><br>
+      <span class="text-zinc-500">## Literature Review</span><br>
+      <span class="text-amber-400">- Smith et al. (2024): methodological gap in section 3</span><br>
+      <span class="text-amber-400">- Chen (2023): contradictory findings to discuss</span><br>
+      <span class="text-zinc-500">## Data Collection</span><br>
+      <span class="text-emerald-400">[x] IRB approval received</span><br>
+      <span class="text-emerald-400">[ ] Send survey to cohort A</span><br>
+      <span class="text-emerald-400">[ ] Download Qualtrics export</span>
+    </div>
+
+    <div class="text-center pt-8 border-t border-zinc-800/50">
+      <p class="text-zinc-400 text-sm mb-4">Keep your next research step visible. Stop context switching.</p>
+      <a href="../index.html#download" class="inline-block px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all">Try Nudge free for 7 days</a>
+      <p class="text-zinc-600 text-xs mt-3">$15 one-time. Free updates for life. No accounts.</p>
+    </div>
+  </section>
+
+  <footer class="w-full border-t border-zinc-800/50 bg-zinc-900/20">
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center text-sm text-zinc-400 gap-4">
+      <p>&copy; 2026 nudge. Available for Windows x64.</p>
+      <div class="flex gap-6">
+        <a href="../index.html" class="hover:text-zinc-300 transition-colors">Home</a>
+        <a href="../changelog.html" class="hover:text-zinc-300 transition-colors">Changelog</a>
+        <a href="../privacy.html" class="hover:text-zinc-300 transition-colors">Privacy</a>
+        <a href="../terms.html" class="hover:text-zinc-300 transition-colors">Terms</a>
+      </div>
+      <a href="mailto:support@nudgehud.work" class="text-emerald-400 hover:underline transition-colors">support@nudgehud.work</a>
+    </div>
+  </footer>
+
+  </div>
+  <script>
+    function gtagEvent(name, params) {
+      if (typeof gtag === 'function') {
+        params = params || {};
+        params.page_location = window.location.href;
+        params.page_path = window.location.pathname;
+        gtag('event', name, params);
+      }
+    }
+    document.querySelectorAll('a[href*="#download"]').forEach(el => {
+      el.addEventListener('click', () => gtagEvent('click_cta', { page: 'use-cases/researchers' }));
+    });
+    document.querySelectorAll('nav a[href*=".html"]').forEach(el => {
+      el.addEventListener('click', () => gtagEvent('click_nav', { target: el.getAttribute('href') }));
+    });
+  </script>
+</body>
+</html>

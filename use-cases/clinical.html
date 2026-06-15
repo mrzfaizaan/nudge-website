@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nudge for Clinicians — Therapy Prompt HUD | Always-On-Top Exercise Sequence Tool</title>
+  <meta http-equiv="content-language" content="en">
+  <link rel="canonical" href="https://nudgehud.work/use-cases/clinical.html">
+  <link rel="alternate" hreflang="en" href="https://nudgehud.work/use-cases/clinical.html">
+  <link rel="alternate" hreflang="x-default" href="https://nudgehud.work/use-cases/clinical.html">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>body{font-family:'Inter',sans-serif}</style>
+  <meta name="description" content="Nudge for clinicians and therapists: keep exercise sequences, speech prompts, and session structures visible during sessions. No paper. No tabbing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nudgehud.work/use-cases/clinical.html">
+  <meta property="og:title" content="Nudge for Clinicians — Therapy Prompt HUD for Sessions">
+  <meta property="og:description" content="Keep exercise sequences and speech prompts visible during therapy sessions. No paper. No tabbing. Persistent until done.">
+  <meta property="og:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://nudgehud.work/use-cases/clinical.html">
+  <meta name="twitter:title" content="Nudge for Clinicians — Therapy Prompt HUD for Sessions">
+  <meta name="twitter:description" content="Keep exercise sequences and speech prompts visible during therapy sessions. No paper. No tabbing.">
+  <meta name="twitter:image" content="https://nudgehud.work/website_handoff/assets/nudge_ad_slate.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Nudge for Clinical & Therapy",
+    "description": "How clinicians and therapists use Nudge to keep exercise sequences and speech prompts visible during sessions."
+  }
+  </script>
+</head>
+<body class="bg-[#09090b] text-zinc-200 antialiased">
+
+  <nav class="hidden lg:flex flex-col fixed top-0 left-0 h-screen w-56 z-50 bg-zinc-900/50 backdrop-blur-xl border-r border-white/10 overflow-y-auto">
+    <div class="px-5 pt-6 pb-4">
+      <a href="../index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+    </div>
+    <div class="px-3 flex-1 space-y-0.5">
+      <a href="../index.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Home</a>
+      <a href="../index.html#why-onetime" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Why Nudge?</a>
+      <a href="../compare/todoist.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">vs Todoist</a>
+      <a href="../use-cases/engineers.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">For Engineers</a>
+      <a href="../use-cases/researchers.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">For Researchers</a>
+      <a href="../use-cases/presenters.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">For Presenters</a>
+      <a href="../use-cases/sales.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">For Sales</a>
+    </div>
+    <div class="px-3 pb-3 mt-auto">
+      <div class="border-t border-white/10 pt-3 space-y-0.5">
+        <a href="../changelog.html" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-500 hover:text-white hover:bg-white/5">Changelog</a>
+        <div class="flex gap-1 px-3 py-1.5">
+          <a href="../privacy.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Privacy</a>
+          <span class="text-zinc-700 text-xs">&middot;</span>
+          <a href="../terms.html" class="text-xs text-zinc-600 hover:text-zinc-400 transition-colors">Terms</a>
+        </div>
+      </div>
+    </div>
+    <div class="px-5 py-3 border-t border-white/10">
+      <a href="mailto:support@nudgehud.work" class="text-xs text-zinc-500 hover:text-zinc-400 transition-colors block truncate">support@nudgehud.work</a>
+    </div>
+  </nav>
+
+  <header class="lg:hidden w-full fixed top-0 z-50 bg-zinc-900/50 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="../index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+      <a href="../index.html#download" class="border border-white/10 hover:bg-white/5 rounded-md px-4 py-2 text-sm transition-all">
+        Get Nudge
+      </a>
+    </div>
+  </header>
+
+  <div class="lg:ml-56">
+  <section class="max-w-3xl mx-auto px-6 pt-32 pb-20">
+    <h1 class="text-4xl font-bold text-white mb-2 tracking-tight">Nudge for Clinical &amp; Therapy</h1>
+    <p class="text-zinc-400 text-sm mb-12">Keep exercise sequences, speech prompts, and session structures visible during sessions. No paper. No tabbing. Persistent until done.</p>
+
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">The problem with sessions and paper notes</h2>
+    <div class="space-y-4 text-zinc-400 text-sm leading-relaxed mb-10">
+      <p>You're mid-session with a patient. The next exercise in the sequence is on a printed sheet — but it's out of reach, or crumpled, or out of order. You glance down at your notes. The patient notices. The moment shifts.</p>
+      <p>Clinical work demands presence. Speech therapy, physical therapy, counseling — every session runs on a sequence. Lose your place and you lose momentum. Paper gets disorganized. Tabbing between windows looks unprofessional. You need prompts visible to you, not the patient.</p>
+      <p>Nudge floats your session plan on screen. Exercise sequences. Speech prompts. Assessment checklists. Always there. Never distracting.</p>
+    </div>
+
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">How clinicians use Nudge</h2>
+    <div class="space-y-4 mb-10">
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Therapy exercise sequences</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Number each exercise in order. "1. Breathing warmup. 2. Word recall drill. 3. Conversation practice." Nudge advances to the next exercise with a keyboard shortcut. No paper. No searching.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Speech and language prompts</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Keep articulation prompts, vocabulary targets, and conversation starters as bullet points. Reference them during the session. The patient focuses on the exercise, not your notes.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Assessment checklist</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Standardize intake evaluations. Every item is a checkbox. ROM assessment. Pain scale. Functional test. Nothing skipped. Nothing double-entered. Complete as you go.</p>
+      </div>
+      <div class="bg-zinc-900/30 border border-zinc-800 rounded-xl p-5">
+        <h3 class="text-white font-semibold text-sm mb-1">Session structure</h3>
+        <p class="text-zinc-400 text-xs leading-relaxed">Template every session type. Initial eval. Follow-up. Discharge. Each has its own .md file. Open the right one. Follow the sequence. Notes and observations go in the same file.</p>
+      </div>
+    </div>
+
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">Why Nudge fits a clinical workflow</h2>
+    <div class="space-y-3 text-zinc-400 text-sm leading-relaxed mb-10">
+      <p><strong class="text-white">Persistent on screen.</strong> Nudge doesn't minimize or time out. Your current exercise stays visible for the entire session. No screensaver interrupting the flow.</p>
+      <p><strong class="text-white">Auto-hide reduces visual noise.</strong> Between exercises, Nudge shrinks to 6 px. Hover to reveal the next step. The focus stays on the patient.</p>
+      <p><strong class="text-white">Local .md file. No HIPAA cloud concerns.</strong> Patient notes, exercise logs, session observations — everything stays in a local file on your machine. No server. No cloud. No compliance headache.</p>
+      <p><strong class="text-white">Clean, minimal interface.</strong> No toolbars. No notifications. No popups. Just the current task on a dark glass surface. Designed to reduce cognitive load for the clinician, not add to it.</p>
+      <p><strong class="text-white">Keyboard-driven navigation.</strong> Ctrl+Alt+Shift+N advances to the next exercise. No mouse. No trackpad. No looking away from the patient.</p>
+    </div>
+
+    <h2 class="text-xl font-bold text-white mb-4 tracking-tight">Sample therapy session file</h2>
+    <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5 font-mono text-sm text-zinc-300 mb-12 leading-relaxed">
+      <span class="text-zinc-600"># Session Plan — Patient A</span><br>
+      <span class="text-zinc-500">## Warmup</span><br>
+      <span class="text-emerald-400">[ ] Breathing exercise — 5 minutes</span><br>
+      <span class="text-zinc-500">## Exercises</span><br>
+      <span class="text-emerald-400">[ ] Word recall drill — picture cards</span><br>
+      <span class="text-emerald-400">[ ] Sentence completion — 10 prompts</span><br>
+      <span class="text-emerald-400">[ ] Conversation practice — 5 min free talk</span><br>
+      <span class="text-zinc-500">## Notes</span><br>
+      <span class="text-amber-400">- Patient responds better to visual cues than verbal</span><br>
+      <span class="text-amber-400">- Sentence completion: 8/10 correct today. Improving.</span><br>
+      <span class="text-zinc-500">## Next Session</span><br>
+      <span class="text-emerald-400">[ ] Introduce category naming exercise</span><br>
+      <span class="text-emerald-400">[ ] Print new picture card set</span>
+    </div>
+
+    <div class="text-center pt-8 border-t border-zinc-800/50">
+      <p class="text-zinc-400 text-sm mb-4">Keep your session plan visible. Focus on the patient, not your notes.</p>
+      <a href="../index.html#download" class="inline-block px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-bold rounded-lg shadow-[0_0_20px_rgba(16,185,129,0.2)] transition-all">Try Nudge free for 7 days</a>
+      <p class="text-zinc-600 text-xs mt-3">$15 one-time. Free updates for life. No accounts.</p>
+    </div>
+  </section>
+
+  <footer class="w-full border-t border-zinc-800/50 bg-zinc-900/20">
+    <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center text-sm text-zinc-400 gap-4">
+      <p>&copy; 2026 nudge. Available for Windows x64.</p>
+      <div class="flex gap-6">
+        <a href="../index.html" class="hover:text-zinc-300 transition-colors">Home</a>
+        <a href="../changelog.html" class="hover:text-zinc-300 transition-colors">Changelog</a>
+        <a href="../privacy.html" class="hover:text-zinc-300 transition-colors">Privacy</a>
+        <a href="../terms.html" class="hover:text-zinc-300 transition-colors">Terms</a>
+      </div>
+      <a href="mailto:support@nudgehud.work" class="text-emerald-400 hover:underline transition-colors">support@nudgehud.work</a>
+    </div>
+  </footer>
+
+  </div>
+  <script>
+    function gtagEvent(name, params) {
+      if (typeof gtag === 'function') {
+        params = params || {};
+        params.page_location = window.location.href;
+        params.page_path = window.location.pathname;
+        gtag('event', name, params);
+      }
+    }
+    document.querySelectorAll('a[href*="#download"]').forEach(el => {
+      el.addEventListener('click', () => gtagEvent('click_cta', { page: 'use-cases/clinical' }));
+    });
+    document.querySelectorAll('nav a[href*=".html"]').forEach(el => {
+      el.addEventListener('click', () => gtagEvent('click_nav', { target: el.getAttribute('href') }));
+    });
+  </script>
+</body>
+</html>

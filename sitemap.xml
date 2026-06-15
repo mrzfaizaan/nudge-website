@@ -42,4 +42,46 @@
     <lastmod>2026-06-15</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://nudgehud.work/compare/ticktick.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudgehud.work/compare/ticktick.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudgehud.work/compare/ticktick.html" />
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudgehud.work/compare/notion.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudgehud.work/compare/notion.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudgehud.work/compare/notion.html" />
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudgehud.work/use-cases/researchers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudgehud.work/use-cases/researchers.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudgehud.work/use-cases/researchers.html" />
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nudgehud.work/use-cases/presenters.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudgehud.work/use-cases/presenters.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudgehud.work/use-cases/presenters.html" />
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nudgehud.work/use-cases/sales.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudgehud.work/use-cases/sales.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudgehud.work/use-cases/sales.html" />
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://nudgehud.work/use-cases/clinical.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudgehud.work/use-cases/clinical.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudgehud.work/use-cases/clinical.html" />
+    <lastmod>2026-06-15</lastmod>
+    <priority>0.6</priority>
+  </url>
 </urlset>
