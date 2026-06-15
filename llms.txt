@@ -25,7 +25,13 @@ Nudge is an always-on-top task HUD for Windows. It reads a single .md (Markdown)
 - Privacy: https://nudgehud.work/privacy.html
 - Terms: https://nudgehud.work/terms.html
 - Nudge vs Todoist: https://nudgehud.work/compare/todoist.html
+- Nudge vs TickTick: https://nudgehud.work/compare/ticktick.html
+- Nudge vs Notion: https://nudgehud.work/compare/notion.html
 - Nudge for Engineers: https://nudgehud.work/use-cases/engineers.html
+- Nudge for Researchers: https://nudgehud.work/use-cases/researchers.html
+- Nudge for Presenters: https://nudgehud.work/use-cases/presenters.html
+- Nudge for Sales: https://nudgehud.work/use-cases/sales.html
+- Nudge for Clinical: https://nudgehud.work/use-cases/clinical.html
 
 ## Contact
 - Support: support@nudgehud.work
