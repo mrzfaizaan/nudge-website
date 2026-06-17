@@ -90,9 +90,9 @@
     </div>
   </header>
 
-  <div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+  <div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm hidden"></div>
 
-  <nav id="mobile-panel" class="fixed top-0 left-0 h-screen w-72 z-50 bg-zinc-900/60 backdrop-blur-2xl border-r border-white/10 overflow-y-auto -translate-x-full transition-transform duration-300 ease-out lg:hidden">
+  <nav id="mobile-panel" class="fixed top-0 left-0 h-screen w-72 z-50 bg-zinc-900/60 backdrop-blur-2xl border-r border-white/10 overflow-y-auto hidden">
     <div class="px-5 pt-6 pb-4 flex items-center justify-between">
       <a href="../index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
         nudge<span class="text-emerald-500">.</span>
@@ -120,9 +120,9 @@
     </div>
   </nav>
   <script>
-    const menuBtn=document.getElementById('mobile-menu-btn'),closeBtn=document.getElementById('mobile-close-btn'),overlay=document.getElementById('mobile-overlay'),panel=document.getElementById('mobile-panel'),ml=menuBtn?menuBtn.querySelectorAll('span'):[];
-    function openMobileMenu(){if(!panel||!overlay)return;panel.classList.remove('-translate-x-full');overlay.classList.remove('opacity-0','pointer-events-none');overlay.classList.add('opacity-100','pointer-events-auto');if(ml.length){ml[0].style.transform='rotate(45deg) translate(3px,3px)';ml[1].style.opacity='0';ml[2].style.transform='rotate(-45deg) translate(3px,-3px)'}}
-    function closeMobileMenu(){if(!panel||!overlay)return;panel.classList.add('-translate-x-full');overlay.classList.remove('opacity-100','pointer-events-auto');overlay.classList.add('opacity-0','pointer-events-none');if(ml.length){ml[0].style.transform='';ml[1].style.opacity='';ml[2].style.transform=''}}
+    const menuBtn=document.getElementById('mobile-menu-btn'),closeBtn=document.getElementById('mobile-close-btn'),overlay=document.getElementById('mobile-overlay'),panel=document.getElementById('mobile-panel');
+    function openMobileMenu(){if(panel)panel.classList.remove('hidden');if(overlay)overlay.classList.remove('hidden')}
+    function closeMobileMenu(){if(panel)panel.classList.add('hidden');if(overlay)overlay.classList.add('hidden')}
     if(menuBtn)menuBtn.addEventListener('click',openMobileMenu);if(closeBtn)closeBtn.addEventListener('click',closeMobileMenu);if(overlay)overlay.addEventListener('click',closeMobileMenu);
   </script>
 
