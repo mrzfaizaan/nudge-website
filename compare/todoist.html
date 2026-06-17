@@ -76,16 +76,57 @@
   </nav>
 
   <!-- Mobile Top Bar -->
+  <!-- Mobile Top Bar -->
   <header class="lg:hidden w-full fixed top-0 z-50 bg-zinc-900/50 backdrop-blur-xl border-b border-white/10">
     <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="../index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
         nudge<span class="text-emerald-500">.</span>
       </a>
-      <a href="../index.html#download" class="border border-white/10 hover:bg-white/5 rounded-md px-4 py-2 text-sm transition-all">
-        Get Nudge
-      </a>
+      <div class="flex items-center gap-3">
+        <button id="mobile-menu-btn" class="flex flex-col gap-1.5 p-2 rounded-md hover:bg-white/5 transition-colors" aria-label="Open menu">
+          <span class="block w-5 h-0.5 bg-white rounded-full transition-transform origin-center"></span>
+          <span class="block w-5 h-0.5 bg-white rounded-full transition-transform origin-center"></span>
+          <span class="block w-5 h-0.5 bg-white rounded-full transition-transform origin-center"></span>
+        </button>
+      </div>
     </div>
   </header>
+
+  <div id="mobile-overlay" class="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 lg:hidden"></div>
+
+  <nav id="mobile-panel" class="fixed top-0 left-0 h-screen w-72 z-50 bg-zinc-900/60 backdrop-blur-2xl border-r border-white/10 overflow-y-auto -translate-x-full transition-transform duration-300 ease-out lg:hidden">
+    <div class="px-5 pt-6 pb-4 flex items-center justify-between">
+      <a href="../index.html" class="text-2xl font-bold text-white lowercase tracking-tight">
+        nudge<span class="text-emerald-500">.</span>
+      </a>
+      <button id="mobile-close-btn" class="p-2 rounded-md hover:bg-white/5 text-zinc-400 hover:text-white transition-colors" aria-label="Close menu">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="px-3 flex-1 space-y-0.5">
+      <a href="../index.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Home</a>
+      <div class="pt-3 pb-1"><span class="block px-3 py-1 text-xs font-medium text-zinc-600 uppercase tracking-wider">Compare</span></div>
+      <a href="../compare/todoist.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">vs Todoist</a>
+      <a href="../compare/ticktick.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">vs TickTick</a>
+      <a href="../compare/notion.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">vs Notion</a>
+      <div class="pt-3 pb-1"><span class="block px-3 py-1 text-xs font-medium text-zinc-600 uppercase tracking-wider">Use Cases</span></div>
+      <a href="../use-cases/engineers.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Engineers</a>
+      <a href="../use-cases/researchers.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Researchers</a>
+      <a href="../use-cases/presenters.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Presenters</a>
+      <a href="../use-cases/sales.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Sales</a>
+      <a href="../use-cases/clinical.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Clinical</a>
+      <div class="pt-3 pb-1"><span class="block px-3 py-1 text-xs font-medium text-zinc-600 uppercase tracking-wider">More</span></div>
+      <a href="../changelog.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Changelog</a>
+      <a href="../privacy.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Privacy</a>
+      <a href="../terms.html" onclick="closeMobileMenu()" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5">Terms</a>
+    </div>
+  </nav>
+  <script>
+    const menuBtn=document.getElementById('mobile-menu-btn'),closeBtn=document.getElementById('mobile-close-btn'),overlay=document.getElementById('mobile-overlay'),panel=document.getElementById('mobile-panel'),ml=menuBtn?menuBtn.querySelectorAll('span'):[];
+    function openMobileMenu(){if(!panel||!overlay)return;panel.classList.remove('-translate-x-full');overlay.classList.remove('opacity-0','pointer-events-none');overlay.classList.add('opacity-100','pointer-events-auto');if(ml.length){ml[0].style.transform='rotate(45deg) translate(3px,3px)';ml[1].style.opacity='0';ml[2].style.transform='rotate(-45deg) translate(3px,-3px)'}}
+    function closeMobileMenu(){if(!panel||!overlay)return;panel.classList.add('-translate-x-full');overlay.classList.remove('opacity-100','pointer-events-auto');overlay.classList.add('opacity-0','pointer-events-none');if(ml.length){ml[0].style.transform='';ml[1].style.opacity='';ml[2].style.transform=''}}
+    if(menuBtn)menuBtn.addEventListener('click',openMobileMenu);if(closeBtn)closeBtn.addEventListener('click',closeMobileMenu);if(overlay)overlay.addEventListener('click',closeMobileMenu);
+  </script>
 
   <div class="lg:ml-56">
   <section class="max-w-4xl mx-auto px-6 pt-32 pb-20">
