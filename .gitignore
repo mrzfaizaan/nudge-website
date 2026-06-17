@@ -40,3 +40,18 @@ AGENT.md
 # Old markdown specs
 *.spec.md
 specs/
+
+# Keys
+~/.tauri/
+
+# Dev environment
+.opencode/
+docs/
+
+# Internal assets
+communications/
+ReleaseNotes_v2.md
+productImage*.png
+favicon_check.png
+master-icon.png
+logo-animation.zip
