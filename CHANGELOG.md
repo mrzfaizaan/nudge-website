@@ -3,6 +3,17 @@
 All notable changes to Nudge will be documented in this file.
 
 ---
+## [1.0.0] — 2026-07-25
+
+### Added
+- **Collapsible heading menu** — a toggle button (⊟/⊞) in the expanded view's add-task row collapses all sections to heading-only mode, turning the task list into a clean document outline. Click any section header to expand just that section and drill into its tasks; click the header again to collapse it back. The active heading receives a subtle emerald accent highlight so you always know which section you're viewing. This is a pure navigation aid — collapsing or expanding headings makes no changes to your task file. Ideal for large task documents with many headings where scrolling through every section is impractical: collapse everything, spot the heading you need, and expand only that one.
+- **Open file on startup** — the last-opened task file is automatically loaded when the app launches. Uses the existing `recent_files` list (no new persistent state field needed) — the most recently opened file is treated as the active file and re-opened at startup. If the file was deleted or moved since your last session, the app gracefully falls back to the default `tasks.txt`. This eliminates the friction of manually re-opening your task file every time you start Nudge, letting you jump straight into your workflow with zero setup.
+
+### Fixed
+- **"Add Task Below" Enter key** — pressing Enter in the right-click context menu's inline "Add Task Below" input now reliably commits the new task on the first keypress. Previously, a `committed` guard flag in the keydown handler caused a race condition: when Enter triggered a blur event on the input field, the blur handler would call `commit()` first and set the guard, which then blocked the keydown handler's own `commit()` from executing. The guard has been removed so the Enter key always commits immediately, matching the behavior of the main "Add task" input at the top of the expanded view.
+- **Formatting `- ` prefix consistency** — `hasExplicitFormat()` previously treated a leading `- ` (dash-space) as an explicit format marker, meaning lines starting with a dash would not inherit the surrounding task's format in preserve mode. Since the Rust parser treats `- ` as plain text, this caused unpredictable formatting behavior. The `- ` prefix has been removed from `hasExplicitFormat()` so dash-prefixed lines now inherit the context task's format in preserve mode and pass through unchanged in full mode — consistent with how all other plain-text input is handled.
+
+---
 
 ## [0.2.2] — 2026-06-12
 

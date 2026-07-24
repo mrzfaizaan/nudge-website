@@ -157,6 +157,7 @@
       <!-- Sidebar Navigator -->
       <nav class="hidden lg:block">
         <div class="sticky top-24 border border-white/10 rounded-lg bg-zinc-900/40 backdrop-blur-sm p-1">
+          <a href="#v1.0.0" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5" data-sidebar-link>v1.0.0</a>
           <a href="#v0.2.2" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5" data-sidebar-link>v0.2.2</a>
           <a href="#v0.2.1" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5" data-sidebar-link>v0.2.1</a>
           <a href="#v0.2.0" class="block px-3 py-1.5 text-sm rounded-md transition-colors cursor-pointer border-l-2 border-transparent text-zinc-400 hover:text-white hover:bg-white/5" data-sidebar-link>v0.2.0</a>
@@ -170,6 +171,35 @@
       <!-- Content Column -->
       <div>
         <h1 class="text-4xl font-bold text-white mb-16 tracking-tight">Changelog</h1>
+
+    <!-- v1.0.0 -->
+    <div class="mb-16">
+      <div class="flex items-baseline gap-3 mb-6">
+        <h2 id="v1.0.0" class="text-2xl font-bold text-white scroll-mt-24">v1.0.0</h2>
+        <span class="text-sm text-zinc-500 ml-2">2026-07-25</span>
+      </div>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-sm font-semibold text-emerald-500 uppercase tracking-wider mb-3">Added</h3>
+          <ul class="space-y-2 text-zinc-400">
+            <li class="pl-4 border-l-2 border-emerald-500/30"><strong class="text-zinc-200">Collapsible heading menu</strong> — a toggle button (⊟/⊞) in the expanded view's add-task row collapses all sections to heading-only mode, turning the task list into a clean document outline. Click any section header to expand just that section and drill into its tasks; click the header again to collapse it back. The active heading receives a subtle emerald accent highlight so you always know which section you're viewing. This is a pure navigation aid — collapsing or expanding headings makes no changes to your task file. Ideal for large task documents with many headings where scrolling through every section is impractical.</li>
+            <li class="pl-4 border-l-2 border-emerald-500/30"><strong class="text-zinc-200">Open file on startup</strong> — the last-opened task file is automatically loaded when the app launches. Uses the existing recent files list (no new persistent state needed) — the most recently opened file is treated as the active file and re-opened at startup. If the file was deleted or moved since your last session, the app gracefully falls back to the default <code class="bg-zinc-800 px-1.5 py-0.5 rounded text-sm text-zinc-300">tasks.txt</code>. No manual file selection needed — jump straight into your workflow.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold text-amber-500 uppercase tracking-wider mb-3">Fixed</h3>
+          <ul class="space-y-2 text-zinc-400">
+            <li class="pl-4 border-l-2 border-amber-500/30"><strong class="text-zinc-200">"Add Task Below" Enter key</strong> — pressing Enter in the right-click context menu's inline "Add Task Below" input now reliably commits the new task on the first keypress. Previously a race condition between the blur and keydown handlers could block the commit. The Enter key now always commits immediately, matching the behavior of the main "Add task" input.</li>
+            <li class="pl-4 border-l-2 border-amber-500/30"><strong class="text-zinc-200">Formatting <code class="bg-zinc-800 px-1.5 py-0.5 rounded text-sm text-zinc-300">-</code> prefix consistency</strong> — dash-prefixed lines (<code class="bg-zinc-800 px-1.5 py-0.5 rounded text-sm text-zinc-300">-</code> <code class="bg-zinc-800 px-1.5 py-0.5 rounded text-sm text-zinc-300">text</code>) now correctly inherit the surrounding task's format in preserve mode, consistent with how the parser treats them as plain text. In full mode they pass through unchanged. No more unpredictable formatting for dash-prefixed input.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-zinc-800/50 my-16"></div>
 
     <!-- v0.2.2 -->
     <div class="mb-16">
@@ -481,7 +511,7 @@
         }
       });
     }, { rootMargin: '-20% 0px -70% 0px' });
-    document.querySelectorAll('h2[id^="v0."]').forEach(h => observer.observe(h));
+    document.querySelectorAll('h2[id^="v0."], h2[id^="v1."]').forEach(h => observer.observe(h));
   </script>
 </body>
 </html>

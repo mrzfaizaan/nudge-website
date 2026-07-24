@@ -1,10 +1,10 @@
 {
-  "version": "0.2.2",
-  "notes": "Bug fixes: duplicate sub-heading parsing (same ## names under different # parents now separate correctly), empty parent headings no longer show 'All tasks complete!', add-task scroll position preserved, preserve/full formatting modes now respected in both input paths, settings/info right-click menus suppressed, expanded view now updates immediately when a new file is opened.",
-  "pub_date": "2026-06-12T00:00:00Z",
+  "version": "1.0.0",
+  "notes": "v1.0 release: Collapsible heading menu (toggle headings in expanded view), auto-open last file on startup, fixed 'Add Task Below' Enter key, formatting consistency improvements.",
+  "pub_date": "2026-07-25T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNThVS01TakVwQ2Zha1pBQS9YdnoxWW9iM0ZzWWRRSGdJcHpUZ3EvVGhOcmtMNGk4dW9kbEJJLzd0OU44OWFZU2p2NlM3N2x3OGxYQ3MrUGxKdytOdUtFOUUrNHFMcUFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjczMzYxCWZpbGU6TnVkZ2VfMC4yLjJfeDY0LXNldHVwLmV4ZQpnS05zVEJqM1Fyenl5MHFpSG1ZWkVCSlZCcTdNMjZpQzc3WEZjc3F4R2NQVDFqRXBYSGc5RXJkRlJSZXVMRnQ1bU81OHMwWHRlTWJMMmpzaVBxaTBCZz09Cg==",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUNThVS01TakVwQ1JiOEVSeFpPTWxtR0YwZ0RZZkRuRjFUNEt3ejBNYWs0N2MxTjUwcVFqUU43RnF0NEpQb2hkL29uUmFYeXFPeWZZWTV5bGw0d2JUTmpIWXkreU1RTHdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg0OTIzMDgxCWZpbGU6TnVkZ2VfMS4wLjBfeDY0LXNldHVwLmV4ZQpTd1p2VDVzR2trRnpqdjRsYXIwYnRzSjFjZFA3K3I2SjNSV2s4VExkZERvL0RBcFFJTWduK2F3QWlmcm5DMnBwSzlmSTVJSi9QdTNUa1k2K1JDZnJCQT09Cg==",
       "url": "https://nudgehud.work/downloads/nudge-setup.exe"
     }
   }
